@@ -1,0 +1,83 @@
+/* ------------------------------------  Edit here for Client Theme Color ------------------------------------ */
+html {
+  font-family: Calibri;
+}
+/* inputs design */
+.custom-input {
+  background-color: #678b9f;
+  opacity: 0.6;
+  border-radius: 20px;
+}
+
+.custom-input:focus {
+  background-color: #678b9f;
+  opacity: 0.6;
+  box-shadow: none;
+  border-color: #678b9f;
+}
+
+/* Chrome, Edge, Safari */
+.custom-input:-webkit-autofill,
+.custom-input:-webkit-autofill:hover,
+.custom-input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px #678b9f inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s; /* stops yellow flash */
+}
+
+/* Firefox */
+.custom-input:-moz-autofill,
+.custom-input:-moz-autofill:hover,
+.custom-input:-moz-autofill:focus {
+  box-shadow: 0 0 0 1000px #678b9f inset !important;
+  color: white !important;
+  transition: background-color 5000s ease-in-out 0s; /* kills blue flash */
+}
+
+/* buttons */
+.primary-btn {
+  background-color: #678b9f !important;
+  color: white !important;
+}
+
+.secondary-btn {
+  background-color: #f08511 !important;
+  color: white !important;
+}
+
+/* text color */
+.primary-text-color {
+  color: #678b9f;
+}
+
+.secondary-text-color {
+  color: #f08511;
+}
+
+/* background color */
+.primary-background {
+  background-color: #678b9f;
+  opacity: 0.7;
+}
+
+.secondary-background {
+  background-color: #f08511;
+  opacity: 0.7;
+}
+
+/*------------------------------------  Custom CSS ------------------------------------ */
+
+
+
+.icon-size {
+  width: 17;
+  height: 16px;
+}
+
+#showpassword {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+

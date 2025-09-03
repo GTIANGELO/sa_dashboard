@@ -1,0 +1,580 @@
+<link href="../style/sidebar_style.css" rel="stylesheet" />
+
+<div class="sidebar d-flex flex-column p-2 bg-light shadow">
+  <!-- Logo -->
+  <div
+    class="mb-3 text-center p-3 d-flex gap-3 justify-content-center align-items-center"
+  >
+    <img
+      class="rounded-circle border shadow-sm"
+      src="../assets/image.png"
+      alt="Logo"
+      style="max-width: 120px"
+    />
+    <div class="d-grid text-start">
+      <span class="fw-bold small">E-11965-14</span>
+      <span class="small">Validad, Angelo F.</span>
+      <span class="small">FS, 2022-23</span>
+      <span class="small">4TH YEAR</span>
+      <span class="small">BSIS</span>
+      <button
+        id="switchaccountmodalbtn"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#dataprivacymodal"
+        class="btn btn-sm primary-btn mt-2"
+      >
+        Switch Account
+      </button>
+    </div>
+  </div>
+
+  <!-- Normal Buttons -->
+  <button
+    class="menu btn custom-btn mb-3 w-100 active d-flex justify-content-start align-items-center gap-2"
+    id="dashboard"
+  >
+    <img
+      src="../assets/icons/dashboard.svg"
+      alt="dashboard"
+      class="menu-icon"
+    />
+    Dashboard
+  </button>
+  <button
+    class="menu btn custom-btn mb-3 w-100 d-flex justify-content-start align-items-center gap-2"
+    id="studentclearance"
+  >
+    <img
+      src="../assets/icons/gard_cap.svg"
+      alt="graduation cap"
+      class="menu-icon"
+    />
+    Student Clearance
+  </button>
+
+  <button
+    class="btn collapse-btn mb-3 w-100 d-flex justify-content-start align-items-center toggle-collapse gap-2"
+    data-target="#collapseEnrollment"
+    aria-expanded="false"
+  >
+    <img
+      src="../assets/icons/enrollment.svg"
+      alt="enrollment"
+      class="menu-icon"
+    />
+
+    <span>Enrollment</span>
+    <img
+      src="../assets/icons/chevron.svg"
+      alt="chevron"
+      class="chevron-icon ms-auto"
+    />
+  </button>
+  <div id="collapseEnrollment" class="collapse mb-3">
+    <div class="card card-body bg-white border-0 p-2">
+      <div class="d-flex gap-2 justify-content-center align-items-center"></div>
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/account.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Online Advising (Year - Term)</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/privacy.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Record Downpayment (Upload Deposit Slip)</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Submit Admission Requirement</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Subject Enrolled</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Enrolled Load Schedule</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Fees Paid During Enrollment</a
+      >
+    </div>
+  </div>
+
+  <button
+    class="btn collapse-btn mb-3 w-100 d-flex justify-content-start align-items-center toggle-collapse gap-2"
+    data-target="#collapseStudent"
+    aria-expanded="false"
+  >
+    <img
+      src="../assets/icons/student_account.svg"
+      alt="enrollment"
+      class="menu-icon"
+    />
+
+    <span>Student Account</span>
+    <img
+      src="../assets/icons/chevron.svg"
+      alt="chevron"
+      class="chevron-icon ms-auto"
+    />
+  </button>
+  <div id="collapseStudent" class="collapse mb-3">
+    <div class="card card-body bg-white border-0 p-2">
+      <div class="d-flex gap-2 justify-content-center align-items-center"></div>
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/account.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Ledger</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/privacy.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Periodic Dues</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Record Tuition Payment (Upload Deposit Slip)</a
+      >
+    </div>
+  </div>
+
+  <button
+    class="btn collapse-btn mb-3 w-100 d-flex justify-content-start align-items-center toggle-collapse gap-2"
+    data-target="#collapseAcademic"
+    aria-expanded="false"
+  >
+    <img
+      src="../assets/icons/academic_performance.svg"
+      alt="enrollment"
+      class="menu-icon"
+    />
+
+    <span>Academic Performance</span>
+    <img
+      src="../assets/icons/chevron.svg"
+      alt="chevron"
+      class="chevron-icon ms-auto"
+    />
+  </button>
+  <div id="collapseAcademic" class="collapse mb-3">
+    <div class="card card-body bg-white border-0 p-2">
+      <div class="d-flex gap-2 justify-content-center align-items-center"></div>
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/account.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Check List</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/privacy.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Class Assignment</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Class Attendance</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Campus Attendance</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Awards/Achievements</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Field Work Profile/OJT</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/security.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Grading Per Exam Period</a
+      >
+    </div>
+  </div>
+
+  <button
+    class="btn collapse-btn mb-3 w-100 d-flex justify-content-start align-items-center toggle-collapse gap-2"
+    data-target="#collapseNonAcademic"
+    aria-expanded="false"
+  >
+    <img
+      src="../assets/icons/nonacad-performance.svg"
+      alt="enrollment"
+      class="menu-icon"
+    />
+
+    <span>Non-Academic Performance</span>
+    <img
+      src="../assets/icons/chevron.svg"
+      alt="chevron"
+      class="chevron-icon ms-auto"
+    />
+  </button>
+  <div id="collapseNonAcademic" class="collapse mb-3">
+    <div class="card card-body bg-white border-0 p-2">
+      <div class="d-flex gap-2 justify-content-center align-items-center"></div>
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/account.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Membership</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/privacy.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Awards/Achievements</a
+      >
+    </div>
+  </div>
+
+  <button
+    class="btn collapse-btn mb-3 w-100 d-flex justify-content-start align-items-center toggle-collapse gap-2"
+    data-target="#collapsePersonal"
+    aria-expanded="false"
+  >
+    <img
+      src="../assets/icons/personal_info.svg"
+      alt="enrollment"
+      class="menu-icon"
+    />
+
+    <span>Peronal Information</span>
+    <img
+      src="../assets/icons/chevron.svg"
+      alt="chevron"
+      class="chevron-icon ms-auto"
+    />
+  </button>
+  <div id="collapsePersonal" class="collapse mb-3">
+    <div class="card card-body bg-white border-0 p-2">
+      <div class="d-flex gap-2 justify-content-center align-items-center"></div>
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/account.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Edit Personal Information</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/privacy.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />View Personal Info</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/privacy.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Print Personal Info</a
+      >
+      <a
+        href="#"
+        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        ><img
+          src="../assets/icons/privacy.svg"
+          alt="enrollment"
+          class="menu-icon"
+        />Change Password</a
+      >
+    </div>
+  </div>
+
+  <button
+    class="btn custom-btn mb-3 w-100 d-flex justify-content-start align-items-center gap-2"
+  >
+    <img src="../assets/icons/library.svg" alt="dashboard" class="menu-icon" />
+    Library
+  </button>
+  <button
+    class="btn custom-btn mb-3 w-100 d-flex justify-content-start align-items-center gap-2"
+  >
+    <img
+      src="../assets/icons/faculty.svg"
+      alt="graduation cap"
+      class="menu-icon"
+    />
+    Faculty Evaluation
+  </button>
+
+  <button
+    class="btn custom-btn mb-3 w-100 d-flex justify-content-start align-items-center gap-2"
+    id="logout"
+  >
+    <img
+      src="../assets/icons/faculty.svg"
+      alt="graduation cap"
+      class="menu-icon"
+    />
+    Logout
+  </button>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="dataprivacymodal"
+  tabindex="-1"
+  aria-labelledby="switchaccountmodal"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+  >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="switchaccountmodal">Switch Account</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="border rounded p-2">
+          <table class="table table-sm table-hover align-items-center">
+            <thead>
+              <tr>
+                <th class="">Profile</th>
+                <th class="">ID Number</th>
+                <th class="">Fullname</th>
+                <th class="">Year and Term</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider align-items-center">
+              <tr>
+                <td>
+                  <img
+                    class="rounded-circle border p-1"
+                    src="../assets/image.png"
+                    alt="Logo"
+                    style="max-width: 50px"
+                  />
+                </td>
+                <td>E-11965-14</td>
+                <td>Validad, Angelo F.</td>
+                <td>2024 - 2nd Term</td>
+                <td class="text-center">
+                  <button class="btn btn-sm secondary-btn rounded-pill">
+                    switch
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="rounded-circle border p-1"
+                    src="../assets/image.png"
+                    alt="Logo"
+                    style="max-width: 50px"
+                  />
+                </td>
+                <td>E-234544-22</td>
+                <td>Dela Crux, Juan D.</td>
+                <td>2023 - 2nd Term</td>
+                <td class="text-center">
+                  <button class="btn btn-sm secondary-btn rounded-pill">
+                    switch
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-sm primary-btn"
+          data-bs-dismiss="modal"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    let userType = new URLSearchParams(window.location.search).get("userType");
+
+    if (userType == "Student") {
+      $("#switchaccountmodalbtn").addClass("d-none");
+      $("#parent-access-note").addClass("d-none");
+    }
+    // Ensure all collapses start hidden unless they have .show in markup
+    document.querySelectorAll(".sidebar .collapse").forEach(function (el) {
+      bootstrap.Collapse.getOrCreateInstance(el, { toggle: false });
+    });
+
+    // Self-toggle + accordion (no Bootstrap data-API involved)
+    $(".toggle-collapse").on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation(); // avoid any external listeners
+
+      const selector = this.getAttribute("data-target");
+      const target = document.querySelector(selector);
+      if (!target) return;
+
+      const inst = bootstrap.Collapse.getOrCreateInstance(target, {
+        toggle: false,
+      });
+
+      if (target.classList.contains("show")) {
+        inst.hide(); // self-close
+      } else {
+        // close any other open section
+        document
+          .querySelectorAll(".sidebar .collapse.show")
+          .forEach((openEl) => {
+            if (openEl !== target) {
+              bootstrap.Collapse.getOrCreateInstance(openEl, {
+                toggle: false,
+              }).hide();
+            }
+          });
+        inst.show(); // open this one
+      }
+    });
+
+    // Keep parent button's aria-expanded and active state in sync
+    document.querySelectorAll(".sidebar .collapse").forEach(function (el) {
+      el.addEventListener("show.bs.collapse", function () {
+        const btn = document.querySelector(
+          '.toggle-collapse[data-target="#' + this.id + '"]'
+        );
+        if (btn) {
+          btn.setAttribute("aria-expanded", "true");
+          // deactivate other toggle buttons
+          document
+            .querySelectorAll(".toggle-collapse")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        }
+      });
+      el.addEventListener("hide.bs.collapse", function () {
+        const btn = document.querySelector(
+          '.toggle-collapse[data-target="#' + this.id + '"]'
+        );
+        if (btn) {
+          btn.setAttribute("aria-expanded", "false");
+          btn.classList.remove("active");
+        }
+      });
+    });
+
+    // Normal buttons (non-collapse) active state
+    $(".sidebar .menu")
+      .not(".toggle-collapse")
+      .on("click", function () {
+        $(".sidebar .menu").removeClass("active");
+        $(".collapse-link").removeClass("active");
+        $(this).addClass("active");
+      });
+
+    // Submenu links active state + highlight its parent button
+    $(".collapse-link").on("click", function () {
+      $(".collapse-link").removeClass("active");
+      $(this).addClass("active");
+
+      const parentId = $(this).closest(".collapse").attr("id");
+      const $parentBtn = $('.toggle-collapse[data-target="#' + parentId + '"]');
+      $(".sidebar .menu").removeClass("active");
+      $parentBtn.addClass("active").attr("aria-expanded", "true");
+    });
+  });
+</script>

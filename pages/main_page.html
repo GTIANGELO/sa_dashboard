@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <!-- bootstrap css -->
+    <link
+      href="../bootstrap/bootstrap-5.3.7-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link href="../style/custom_style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid vh-100">
+      <div class="row h-100">
+        <!-- Sidebar Column -->
+        <div class="col-2 p-0 shadow-lg">
+          <div id="sidebar-container" class="h-100"></div>
+        </div>
+
+        <!-- Main Content Column -->
+        <div class="col-10 overflow-auto h-100" id="maincontent"></div>
+      </div>
+    </div>
+
+    <!-- bootstrap javascript -->
+    <script src="../bootstrap/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="../jquery/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("jQuery is working!");
+
+        $("#sidebar-container").load("sidebar.html", function () {
+          console.log("Sidebar loaded successfully!");
+        });
+
+        $("#maincontent").load("dashboard.html", function () {
+          console.log("dashboard loaded successfully!");
+        });
+
+        $(document).on("click", "#dashboard", function () {
+          $("#maincontent").load("dashboard.html", function () {
+            console.log("student_clearance loaded successfully!");
+          });
+        });
+
+        $(document).on("click", "#studentclearance", function () {
+          $("#maincontent").load("student_clearance.html", function () {
+            console.log("student_clearance loaded successfully!");
+          });
+        });
+
+        $(document).on("click", "#logout", function () {
+          window.location.href = "login_page.html";
+        });
+      });
+    </script>
+  </body>
+</html>

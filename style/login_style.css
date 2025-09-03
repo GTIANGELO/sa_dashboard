@@ -1,0 +1,39 @@
+.primary-btn-login {
+  background-color: #678b9f !important;
+  opacity: 0.8 !important;
+  color: white !important;
+}
+
+.secondary-btn-login {
+  background-color: #f08511 !important;
+  opacity: 0.8 !important;
+}
+
+/* Spin + Pulse */
+@keyframes pulseSpin {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.1) rotate(90deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.1) rotate(270deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.loading-spinner {
+  animation: pulseSpin 1.5s infinite ease-in-out;
+  display: inline-block;
+}
