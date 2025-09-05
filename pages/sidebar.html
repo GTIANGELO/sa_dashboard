@@ -401,93 +401,6 @@
   </button>
 </div>
 
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="dataprivacymodal"
-  tabindex="-1"
-  aria-labelledby="switchaccountmodal"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="switchaccountmodal">Switch Account</h1>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <div class="border rounded p-2">
-          <table class="table table-sm table-hover align-items-center">
-            <thead>
-              <tr>
-                <th class="">Profile</th>
-                <th class="">ID Number</th>
-                <th class="">Fullname</th>
-                <th class="">Year and Term</th>
-                <th class="text-center">Action</th>
-              </tr>
-            </thead>
-            <tbody class="table-group-divider align-items-center">
-              <tr>
-                <td>
-                  <img
-                    class="rounded-circle border p-1"
-                    src="../assets/image.png"
-                    alt="Logo"
-                    style="max-width: 50px"
-                  />
-                </td>
-                <td>E-11965-14</td>
-                <td>Validad, Angelo F.</td>
-                <td>2024 - 2nd Term</td>
-                <td class="text-center">
-                  <button class="btn btn-sm secondary-btn rounded-pill">
-                    switch
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="rounded-circle border p-1"
-                    src="../assets/image.png"
-                    alt="Logo"
-                    style="max-width: 50px"
-                  />
-                </td>
-                <td>E-234544-22</td>
-                <td>Dela Crux, Juan D.</td>
-                <td>2023 - 2nd Term</td>
-                <td class="text-center">
-                  <button class="btn btn-sm secondary-btn rounded-pill">
-                    switch
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-sm primary-btn"
-          data-bs-dismiss="modal"
-        >
-          Cancel
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
   $(function () {
     let userType = new URLSearchParams(window.location.search).get("userType");
@@ -564,6 +477,13 @@
         $(".sidebar .menu").removeClass("active");
         $(".collapse-link").removeClass("active");
         $(this).addClass("active");
+
+        // Close the offcanvas if it's open
+        var offcanvasEl = document.querySelector("#sidebar"); // change ID to yours
+        var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+        if (offcanvas) {
+          offcanvas.hide();
+        }
       });
 
     // Submenu links active state + highlight its parent button
