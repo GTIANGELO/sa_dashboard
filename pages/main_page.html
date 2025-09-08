@@ -34,7 +34,7 @@
       id="sidebar"
       aria-labelledby="sidebarLabel"
     >
-      <div class="offcanvas-header">
+      <!-- <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="sidebarLabel">Menu</h5>
         <button
           type="button"
@@ -42,9 +42,9 @@
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>
-      </div>
+      </div> -->
       <div class="offcanvas-body p-0 m-0">
-        <div id="sidebar-container-small"></div>
+        <div id="sidebar-container-small" class=""></div>
       </div>
     </div>
 
@@ -146,12 +146,27 @@
       $(document).ready(function () {
         console.log("jQuery is working!");
 
+        // Load normal sidebar (desktop, lg+)
         $("#sidebar-container").load("sidebar.html", function () {
-          console.log("Sidebar loaded successfully!");
+          console.log("Sidebar loaded successfully for large screens!");
         });
 
+        // Load offcanvas sidebar (sm/md)
         $("#sidebar-container-small").load("sidebar.html", function () {
-          console.log("Sidebar loaded successfully!");
+          console.log("Sidebar loaded successfully in small screen sizes");
+
+          // Rename all collapses and their triggers to avoid conflicts
+          $("#sidebar-container-small .collapse").each(function () {
+            let oldId = $(this).attr("id");
+            let newId = oldId + "-sm";
+            $(this).attr("id", newId);
+
+            // Update matching trigger buttons (data-target, NOT data-bs-target)
+            $('#sidebar-container-small [data-target="#' + oldId + '"]').attr(
+              "data-target",
+              "#" + newId
+            );
+          });
         });
 
         $("#maincontent").load("dashboard.html", function () {
