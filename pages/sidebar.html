@@ -416,8 +416,8 @@
 
     // Self-toggle + accordion (no Bootstrap data-API involved)
     $(".toggle-collapse").on("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation(); // avoid any external listeners
+      // e.preventDefault();
+      // e.stopPropagation(); // avoid any external listeners
 
       const selector = this.getAttribute("data-target");
       const target = document.querySelector(selector);
