@@ -1,3 +1,26 @@
 .sm-text {
   font-size: 0.75rem;
 }
+
+.fixed-card {
+  height: 200px; /* adjust this number based on your tallest card */
+}
+
+/* Optional: make content stretch nicely inside */
+.fixed-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.table-fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-fixed th,
+.table-fixed td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
