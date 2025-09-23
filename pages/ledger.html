@@ -17,31 +17,139 @@
           style="width: 20px; height: 20px"
         />
       </a>
-      Ledger
+      Student Ledger
     </div>
     <div class="text-center p-1 bg-light rounded-circle">
       <img src="../assets/sample_logo.png" alt="Logo" style="max-width: 50px" />
     </div>
   </div>
 </div>
-
-<div class="d-grid gap-1 m-4">
-  <div class="row align-items-stretch justify-content-center mb-3">
-    <div class="col-8 d-flex">
-      <div
-        class="d-grid align-items-center gap-2 border shadow-sm rounded p-3 w-100"
+<div class="border p-3 shadow-sm mt-4 rounded">
+<div class="d-flex gap-3  w-100">
+  
+  <div class="d-flex gap-2 align-items-center w-100">
+    <span class="w-25">SY-Term</span>
+    <div class="form-floating w-100">
+      <input
+        type="text"
+        class="form-control"
+        id="starting_year"
+        placeholder="Starting year"
+      />
+      <label for="starting_year" class="">
+        <div class="d-flex align-items-center gap-1">
+          
+          Starting year
+        </div></label
       >
-        <div class="d-flex justify-content-between align-items-start gap-2 p-2">
-          <div class="d-grid gap-0">
-            <h1 class="display-6 fw-bold">Ledger Content</h1>
-            <div
-              class="fw-bold m-0 d-flex align-items-center gap-2 fs-6 mt-auto"
-            ></div>
-          </div>
-        </div>
-      </div>
+    </div>
+      <span>-</span>
+    <div class="form-floating w-100">
+      <input
+        type="text"
+        class="form-control"
+        id="ending_year"
+        placeholder="Ending year"
+      />
+      <label for="ending_year" class="">
+        <div class="d-flex align-items-center gap-1">
+          
+          Ending year
+        </div></label
+      >
     </div>
   </div>
+  
+  <select name="w-25" id="" class="form-select">
+          <option value="">Select School Term</option>
+          <option value="">1st Sem</option>
+          <option value="">2nd Sem</option>
+          <option value="">3rd Sem</option>
+          <option value="">Summer</option>
+        </select>
+        <button class="btn btn-sm primary-btn w-25">Proceed</button>
+  </div>
+  <div class="d-flex justify-content-between mt-4">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="show_ledger_from_start">
+      <label class="form-check-label" for="show_ledger_from_start">Show Ledger from the first enrolled semester until present</label>
+    </div>
+    <a href="#!" class="text-primary">View installment Schedule</a>
+  </div>
+
+  <div class="border p-3  mt-4">
+
+  <div class="d-grid w-100 gap-2 ">
+    <div class="d-flex gap-5 w-100">
+      <div class="d-flex gap-2">Student ID: <span class="fw-bold">E-11965-14</span></div>
+      <div class="d-flex gap-2">Course/Major: <span class="fw-bold">BSIS</span></div>
+    </div>
+    <div class="d-flex gap-5 w-100">
+      <div class="d-flex gap-2">Student Name: <span class="fw-bold">Validad, Angelo</span></div>
+      <div class="d-flex gap-2">Current Year: <span class="fw-bold">4(First Sem)</span></div>
+    </div>
+  </div>
+
+
+  <div style="max-height: 350px; overflow-y: auto">
+        <div class="table-responsive mt-3 ">
+          <table class="table table-sm table-hover table-fixed">
+            <thead>
+              <tr>
+                <th style="width: 120px">Date</th>
+                <th style="width: 300px">Particulars</th>
+                <th style="width: 200px">Collected By (ID)</th>
+                <th style="width: 150px">Debit</th>
+                <th style="width: 150px">Credit</th>
+                <th style="width: 100px">Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Old Accounts</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>08/17/2022</td>
+                <td>Tuition Fee</td>
+                <td></td>
+                <td>1,935.00</td>
+                <td></td>
+                <td>1,935.00</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Miscellaneous Fee</td>
+                <td></td>
+                <td>9,906.00</td>
+                <td></td>
+                <td>11,841.00</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Other Charges</td>
+                <td></td>
+                <td>1,000.00</td>
+                <td></td>
+                <td>12,841.00</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>448591 Enrollment/Downpayment - Cash</td>
+                <td>Roy Louie</td>
+                <td></td>
+                <td>100.00</td>
+                <td>12,741.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
 </div>
 
 <!-- Jquery -->
