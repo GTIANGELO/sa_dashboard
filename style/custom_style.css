@@ -92,3 +92,19 @@ html {
   word-wrap: break-word; /* break long words if needed */
   word-break: break-word; /* ensures breaking happens */
 }
+
+#residency_evaluation td.passing {
+  background-color: #5bc0de;
+}
+
+#residency_evaluation td.less {
+  background-color: #292b2c;
+}
+
+#residency_evaluation td.enrolled {
+  background-color: #f0ad4e;
+}
+
+#residency_evaluation td.credited {
+  background-color: #5cb85c;
+}

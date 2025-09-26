@@ -25,131 +25,145 @@
   </div>
 </div>
 <div class="border p-3 shadow-sm mt-4 rounded">
-<div class="d-flex gap-3  w-100">
-  
-  <div class="d-flex gap-2 align-items-center w-100">
-    <span class="w-25">SY-Term</span>
-    <div class="form-floating w-100">
-      <input
-        type="text"
-        class="form-control"
-        id="starting_year"
-        placeholder="Starting year"
-      />
-      <label for="starting_year" class="">
-        <div class="d-flex align-items-center gap-1">
-          
-          Starting year
-        </div></label
-      >
-    </div>
+  <div class="d-flex gap-3 w-100">
+    <div class="d-flex gap-2 align-items-center w-100">
+      <span class="w-25">SY-Term</span>
+      <div class="form-floating w-100">
+        <input
+          type="text"
+          class="form-control"
+          id="starting_year"
+          placeholder="Starting year"
+        />
+        <label for="starting_year" class="">
+          <div class="d-flex align-items-center gap-1">
+            Starting year
+          </div></label
+        >
+      </div>
       <span>-</span>
-    <div class="form-floating w-100">
-      <input
-        type="text"
-        class="form-control"
-        id="ending_year"
-        placeholder="Ending year"
-      />
-      <label for="ending_year" class="">
-        <div class="d-flex align-items-center gap-1">
-          
-          Ending year
-        </div></label
-      >
+      <div class="form-floating w-100">
+        <input
+          type="text"
+          class="form-control"
+          id="ending_year"
+          placeholder="Ending year"
+        />
+        <label for="ending_year" class="">
+          <div class="d-flex align-items-center gap-1">Ending year</div></label
+        >
+      </div>
     </div>
+
+    <select name="w-25" id="" class="form-select">
+      <option value="">Select School Term</option>
+      <option value="">1st Sem</option>
+      <option value="">2nd Sem</option>
+      <option value="">3rd Sem</option>
+      <option value="">Summer</option>
+    </select>
+    <button class="btn btn-sm primary-btn w-25">Proceed</button>
   </div>
-  
-  <select name="w-25" id="" class="form-select">
-          <option value="">Select School Term</option>
-          <option value="">1st Sem</option>
-          <option value="">2nd Sem</option>
-          <option value="">3rd Sem</option>
-          <option value="">Summer</option>
-        </select>
-        <button class="btn btn-sm primary-btn w-25">Proceed</button>
-  </div>
-  <div class="d-flex justify-content-between mt-4">
+  <div class="d-flex justify-content-between mt-3 mb-5">
     <div class="form-check form-switch">
-      <input class="form-check-input" type="checkbox" id="show_ledger_from_start">
-      <label class="form-check-label" for="show_ledger_from_start">Show Ledger from the first enrolled semester until present</label>
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="show_ledger_from_start"
+      />
+      <label class="form-check-label" for="show_ledger_from_start"
+        >Show Ledger from the first enrolled semester until present</label
+      >
     </div>
     <a href="#!" class="text-primary">View installment Schedule</a>
   </div>
 
-  <div class="border p-3  mt-4">
-
-  <div class="d-grid w-100 gap-2 ">
-    <div class="d-flex gap-5 w-100">
-      <div class="d-flex gap-2">Student ID: <span class="fw-bold">E-11965-14</span></div>
-      <div class="d-flex gap-2">Course/Major: <span class="fw-bold">BSIS</span></div>
+  <div class="row mt-4">
+    <!-- First column -->
+    <div class="col-6">
+      <div class="d-flex mb-2">
+        <div class="fw-normal" style="width: 120px">Student ID:</div>
+        <div class="fw-bold">E-11965-14</div>
+      </div>
+      <div class="d-flex mb-2">
+        <div class="fw-normal" style="width: 120px">Course/Major:</div>
+        <div class="fw-bold">BSIS</div>
+      </div>
     </div>
-    <div class="d-flex gap-5 w-100">
-      <div class="d-flex gap-2">Student Name: <span class="fw-bold">Validad, Angelo</span></div>
-      <div class="d-flex gap-2">Current Year: <span class="fw-bold">4(First Sem)</span></div>
+
+    <!-- Second column -->
+    <div class="col-6">
+      <div class="d-flex mb-2">
+        <div class="fw-normal" style="width: 120px">Student Name:</div>
+        <div class="fw-bold">Validad, Angelo</div>
+      </div>
+      <div class="d-flex mb-2">
+        <div class="fw-normal" style="width: 120px">Current Year:</div>
+        <div class="fw-bold">4 (First Sem)</div>
+      </div>
     </div>
   </div>
 
-
-  <div style="max-height: 350px; overflow-y: auto">
-        <div class="table-responsive mt-3 ">
-          <table class="table table-sm table-hover table-fixed">
-            <thead>
-              <tr>
-                <th style="width: 120px">Date</th>
-                <th style="width: 300px">Particulars</th>
-                <th style="width: 200px">Collected By (ID)</th>
-                <th style="width: 150px">Debit</th>
-                <th style="width: 150px">Credit</th>
-                <th style="width: 100px">Balance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>Old Accounts</td>
-                <td>0.00</td>
-              </tr>
-              <tr>
-                <td>08/17/2022</td>
-                <td>Tuition Fee</td>
-                <td></td>
-                <td>1,935.00</td>
-                <td></td>
-                <td>1,935.00</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Miscellaneous Fee</td>
-                <td></td>
-                <td>9,906.00</td>
-                <td></td>
-                <td>11,841.00</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Other Charges</td>
-                <td></td>
-                <td>1,000.00</td>
-                <td></td>
-                <td>12,841.00</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>448591 Enrollment/Downpayment - Cash</td>
-                <td>Roy Louie</td>
-                <td></td>
-                <td>100.00</td>
-                <td>12,741.00</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <div class="border rounded mt-4">
+    <div style="max-height: 350px; overflow-y: auto">
+      <div class="table-responsive p-2">
+        <table class="table table-striped table-sm table-hover table-fixed">
+          <thead>
+            <tr>
+              <th style="width: 120px">Date</th>
+              <th style="width: 300px">Particulars</th>
+              <th style="width: 200px">Collected By (ID)</th>
+              <th style="width: 150px">Debit</th>
+              <th style="width: 150px">Credit</th>
+              <th style="width: 100px">Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Old Accounts</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>08/17/2022</td>
+              <td>Tuition Fee</td>
+              <td></td>
+              <td>1,935.00</td>
+              <td></td>
+              <td>1,935.00</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Miscellaneous Fee</td>
+              <td></td>
+              <td>9,906.00</td>
+              <td></td>
+              <td>11,841.00</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Other Charges</td>
+              <td></td>
+              <td>1,000.00</td>
+              <td></td>
+              <td>12,841.00</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>448591 Enrollment/Downpayment - Cash</td>
+              <td>Roy Louie</td>
+              <td></td>
+              <td>100.00</td>
+              <td>12,741.00</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-</div>
+    </div>
+  </div>
 </div>
 
 <!-- Jquery -->
