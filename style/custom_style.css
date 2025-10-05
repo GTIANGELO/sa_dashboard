@@ -93,18 +93,30 @@ html {
   word-break: break-word; /* ensures breaking happens */
 }
 
-#residency_evaluation td.passing {
-  background-color: #5bc0de;
+#residency_evaluation td.passing,
+#residency_evaluation div.passing {
+  background-color: #73c7e0;
+  opacity: 0.7;
+  color: black;
 }
 
-#residency_evaluation td.less {
+#residency_evaluation td.less,
+#residency_evaluation div.less {
   background-color: #292b2c;
+  opacity: 0.5;
+    color: lightgrey;
 }
 
-#residency_evaluation td.enrolled {
-  background-color: #f0ad4e;
+#residency_evaluation td.enrolled,
+#residency_evaluation div.enrolled {
+  background-color: #f5db32;
+  opacity: 0.6;
+  color: black;
 }
 
-#residency_evaluation td.credited {
+#residency_evaluation td.credited,
+#residency_evaluation div.credited {
   background-color: #5cb85c;
+  opacity: 0.8;
+    color: black;
 }
