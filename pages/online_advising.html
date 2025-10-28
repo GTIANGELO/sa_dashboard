@@ -1,45 +1,103 @@
-<div class="shadow-sm border rounded bg-light my-2">
+<div class="shadow-sm border rounded my-2">
   <div
-    class="d-flex p-2 px-3 justify-content-between align-items-center secondary-text-color fs-5 fw-bold"
+    class="d-flex align-items-center justify-content-between w-100 p-2 px-3 fs-6 fw-bold"
   >
-    <div class="d-flex gap-2">
+    <div class="d-flex align-items-center gap-2">
       <a
-        class="d-block d-lg-none btn btn-sm"
+        class="d-flex gap-2 d-xl-none btn btn-sm"
         data-bs-toggle="offcanvas"
         href="#sidebar"
         role="button"
         aria-controls="sidebar"
-        style="width: 40px; height: 40px"
       >
         <img
           src="../assets/icons/burger_menu.svg"
           alt="menu"
-          style="width: 20px; height: 20px"
+          style="width: 20px"
         />
       </a>
-      Online Advising
+      <div class="fs-6 fw-bold secondary-text-color">Online Advising</div>
     </div>
-    <div class="text-center p-1 bg-light rounded-circle">
+
+    <div class="text-center p-1 rounded-circle">
       <img src="../assets/sample_logo.png" alt="Logo" style="max-width: 50px" />
     </div>
   </div>
 </div>
 
-<div class="d-grid gap-1 m-4">
-  <div class="row align-items-stretch justify-content-center mb-3">
-    <div class="col-8 d-flex">
-      <div
-        class="d-grid align-items-center gap-2 border shadow-sm rounded p-3 w-100"
-      >
-        <div class="d-flex justify-content-between align-items-start gap-2 p-2">
-          <div class="d-grid gap-0">
-            <h1 class="display-6 fw-bold">Online Advising Content</h1>
-            <div
-              class="fw-bold m-0 d-flex align-items-center gap-2 fs-6 mt-auto"
-            ></div>
-          </div>
-        </div>
+<div class="p-3 border shadow mt-4 rounded">
+  <div class="primary-text-color">
+    NOTE : Information on this page is non-editable. If there is any wrong
+    enrollment information, please proceed to your college for advising.
+  </div>
+
+  <div class="row mt-4 small">
+    <!-- First column -->
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-6">
+      <div class="d-grid d-md-flex mb-2">
+        <div class="fw-normal" style="width: 45%">Student ID:</div>
+        <div class="fw-bold">E-11965-14</div>
       </div>
+      <div class="d-grid d-md-flex mb-2">
+        <div class="fw-normal" style="width: 45%">Course/Major:</div>
+        <div class="fw-bold">Bachelor of Science in Information Technology</div>
+      </div>
+      <div class="d-grid d-md-flex mb-2">
+        <div class="fw-normal" style="width: 45%">Year level entry:</div>
+        <div class="fw-bold">1ST YR</div>
+      </div>
+      <div class="d-grid d-md-flex mb-2">
+        <div class="fw-normal" style="width: 45%">School Year (Default):</div>
+        <div class="fw-bold">2025 - 2026 (2ND SEM)</div>
+      </div>
+    </div>
+
+    <!-- Second column -->
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-6">
+      <div class="d-grid d-md-flex mb-2">
+        <div class="fw-normal" style="width: 45%">Curriculum Year:</div>
+        <div class="fw-bold">2023 - 2024</div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="row mt-4 small">
+    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+      <div class="d-grid d-md-flex mb-2">
+        <div class="fw-normal" style="width: 45%">Student Lastname:</div>
+        <div class="fw-bold">Validad</div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+      <div class="d-grid d-md-flex mb-2">
+        <div class="fw-normal" style="width: 45%">Student Firstname:</div>
+        <div class="fw-bold">Angelo</div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+      <div class="d-grid d-md-flex mb-2">
+        <div class="fw-normal" style="width: 45%">Student Middlename:</div>
+        <div class="fw-bold">Frias</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-3 align-items-center mt-3">
+    <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+      <div class="form-floating">
+        <select name="" id="" class="form-select">
+          <option value="">Select...</option>
+          <option value="">LMS</option>
+          <option value="">Modular/Correspondence</option>
+        </select>
+        <label for="starting_year">Mode of Instruction:</label>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2">
+      <button class="btn btn-sm primary-btn w-100 h-100">
+        Validate and Proceed to Advising
+      </button>
     </div>
   </div>
 </div>

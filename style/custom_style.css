@@ -104,7 +104,7 @@ html {
 #residency_evaluation div.less {
   background-color: #292b2c;
   opacity: 0.5;
-    color: lightgrey;
+  color: lightgrey;
 }
 
 #residency_evaluation td.enrolled,
@@ -118,5 +118,5 @@ html {
 #residency_evaluation div.credited {
   background-color: #5cb85c;
   opacity: 0.8;
-    color: black;
+  color: black;
 }

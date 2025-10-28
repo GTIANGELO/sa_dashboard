@@ -1,65 +1,65 @@
 <link href="../style/custom_style.css" rel="stylesheet" />
 
-<div class="shadow-sm border rounded bg-light my-2">
+<div class="shadow-sm border rounded my-2">
   <div
-    class="d-flex p-2 px-3 justify-content-between align-items-center secondary-text-color fs-5 fw-bold"
+    class="d-flex align-items-center justify-content-between w-100 p-2 px-3 fs-6 fw-bold"
   >
-    <div class="d-flex gap-2">
+    <div class="d-flex align-items-center gap-2">
       <a
-        class="d-block d-lg-none btn btn-sm"
+        class="d-flex gap-2 d-xl-none btn btn-sm"
         data-bs-toggle="offcanvas"
         href="#sidebar"
         role="button"
         aria-controls="sidebar"
-        style="width: 40px; height: 40px"
       >
         <img
           src="../assets/icons/burger_menu.svg"
           alt="menu"
-          style="width: 20px; height: 20px"
+          style="width: 20px"
         />
       </a>
-      Subjects Enrolled
+      <div class="fs-6 fw-bold secondary-text-color">Subjects Enrolled</div>
     </div>
-    <div class="text-center p-1 bg-light rounded-circle">
+
+    <div class="text-center p-1 rounded-circle">
       <img src="../assets/sample_logo.png" alt="Logo" style="max-width: 50px" />
     </div>
   </div>
 </div>
 
-<div class="my-3">
-  <div class="row align-items-center">
+<div class="my-3" id="print_section">
+  <div class="row align-items-center small">
     <div class="col">
       <div class="border shadow-sm p-3 rounded">
-        <span class="fw-bold fs-5">ENROLLED LIST FOR 1ST SEM, 2022-2023</span>
-        <div class="row small mt-4">
+        <span class="fw-bold fs-6">ENROLLED LIST FOR 1ST SEM, 2022-2023</span>
+        <div class="d-grid d-lg-flex gap-3 align-items-center mt-4">
           <!-- Left side -->
-          <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="row">
-              <div class="d-flex gap-2">
-                <div class="col-sm-6 col-md-6 col-lg-4 fw-bold">
-                  Enrolled SY-Term:
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-8">2022-2023-1st SEM</div>
-              </div>
+          <div class="d-flex w-50 mb-2 small">
+            <div class="fw-normal" style="width: 200px">
+              DATE OFFICIALLY ENROLLED:
             </div>
+            <div class="fw-bold">08/25/2022</div>
           </div>
 
           <!-- Right side -->
-          <div class="col-sm-12 col-md-6 col-lg-6">
-            <a type="button" class="btn btn-sm float-end primary-btn"
-              ><img
-                src="../assets/icons/print.svg"
-                alt="enrollment"
-                class="menu-icon"
-              />
-              Print</a
-            >
-          </div>
+          <a
+            id="btn_print"
+            type="button"
+            class="btn btn-sm float-end primary-btn ms-auto rounded-pill"
+          >
+            <img
+              src="../assets/icons/print.svg"
+              alt="enrollment"
+              class="menu-icon"
+            />
+            Print
+          </a>
         </div>
 
-        <div class="border rounded p-3 mt-4">
-          <div class="d-flex gap-5">
+        <div class="mt-4">
+          <div
+            class="d-grid d-md-flex align-items-center justify-content-between"
+          >
             <span class="mb-3 small mb-2"
               >MAXIMUM UNITS FOR THIS SEMESTER : 21.0</span
             >
@@ -138,6 +138,19 @@
 <script src="../jquery/jquery.js"></script>
 <script>
   $(document).ready(function () {
-    console.log("jQuery is working!");
+    $("#btn_print").on("click", function (e) {
+      e.preventDefault();
+
+      const originalContents = document.body.innerHTML;
+      const printContents = document.getElementById("print_section").innerHTML;
+
+      document.body.innerHTML = printContents;
+
+      window.print();
+
+      document.body.innerHTML = originalContents;
+
+      location.reload();
+    });
   });
 </script>

@@ -1,52 +1,53 @@
-<div class="shadow-sm border rounded bg-light my-2">
+<div class="shadow-sm border rounded my-2">
   <div
-    class="d-flex p-2 px-3 justify-content-between align-items-center secondary-text-color fs-5 fw-bold"
+    class="d-flex align-items-center justify-content-between w-100 p-2 px-3 fs-6 fw-bold"
   >
-    <div class="d-flex gap-2">
+    <div class="d-flex align-items-center gap-2">
       <a
-        class="d-block d-lg-none btn btn-sm"
+        class="d-flex gap-2 d-xl-none btn btn-sm"
         data-bs-toggle="offcanvas"
         href="#sidebar"
         role="button"
         aria-controls="sidebar"
-        style="width: 40px; height: 40px"
       >
         <img
           src="../assets/icons/burger_menu.svg"
           alt="menu"
-          style="width: 20px; height: 20px"
+          style="width: 20px"
         />
       </a>
-      Class Assignment
+      <div class="fs-6 fw-bold secondary-text-color">Class Assignment</div>
     </div>
-    <div class="text-center p-1 bg-light rounded-circle">
+
+    <div class="text-center p-1 rounded-circle">
       <img src="../assets/sample_logo.png" alt="Logo" style="max-width: 50px" />
     </div>
   </div>
 </div>
 <div class="border p-3 shadow-sm mt-4 rounded">
   <div class="fw-bold fs-5 mb-3">No Assignment Found</div>
-  <div class="d-flex gap-3 w-75">
-    <div class="d-flex gap-2  w-100">
-      <div class="form-floating w-100">
-        <input type="text" class="form-control" id="starting_year" placeholder="Starting year" />
-        <label for="starting_year" class="">
-          <div class="d-flex align-items-center gap-1">
-            Year
-          </div>
-        </label>
-      </div>
-      <span class="my-auto">-</span>
-      
-      <select name="w-25" id="" class="form-select">
-        <option value="">Select School Term</option>
-        <option value="">1st Sem</option>
-        <option value="">2nd Sem</option>
-        <option value="">3rd Sem</option>
-        <option value="">Summer</option>
-      </select>
+  <div class="d-grid d-md-flex gap-3 w-100 w-lg-75">
+    <div class="form-floating w-100">
+      <input
+        type="text"
+        class="form-control"
+        id="starting_year"
+        placeholder="Starting year"
+      />
+      <label for="starting_year" class="">
+        <div class="d-flex align-items-center gap-1">Year</div>
+      </label>
     </div>
-<button class="btn btn-sm primary-btn w-25">Refresh</button>
+    <span class="d-none d-lg-flex my-auto">-</span>
+
+    <select name="w-25" id="" class="form-select">
+      <option value="">Select School Term</option>
+      <option value="">1st Sem</option>
+      <option value="">2nd Sem</option>
+      <option value="">3rd Sem</option>
+      <option value="">Summer</option>
+    </select>
+    <button class="btn btn-sm primary-btn w-25 my-auto">Refresh</button>
   </div>
 </div>
 

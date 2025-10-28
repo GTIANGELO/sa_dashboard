@@ -4,329 +4,198 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Portal</title>
-    <!-- bootstrap css -->
+
+    <!-- ✅ Security improvement: Content Security Policy -->
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+    /> -->
+
+    <!-- Bootstrap CSS -->
     <link
       href="../bootstrap/bootstrap-5.3.7-dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- custom css -->
+
+    <!-- Custom CSS -->
     <link href="../style/custom_style.css" rel="stylesheet" />
   </head>
+
   <body>
     <div class="container-fluid vh-100">
       <div class="row justify-content-center align-items-center h-100">
-        <!-- Sidebar Column -->
-        <div class="col-lg-2 d-none d-lg-block p-0 shadow-sm">
+        <!-- Sidebar (desktop) -->
+        <div
+          class="col-sm-0 col-md-0 col-lg-0 col-xl-3 col-xxl-2 p-0 shadow-sm d-none d-xl-flex"
+        >
           <div id="sidebar-container" class="h-100"></div>
         </div>
 
-        <!-- Main Content Column -->
+        <!-- Main content -->
         <div
-          class="col-12 col-lg-10 overflow-auto h-100"
+          class="col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-10 overflow-auto h-100 border"
           id="maincontent"
         ></div>
       </div>
     </div>
 
+    <!-- Offcanvas (small screens) -->
     <div
       class="offcanvas offcanvas-start"
       tabindex="-1"
       id="sidebar"
       aria-labelledby="sidebarLabel"
     >
-      <!-- <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="sidebarLabel">Menu</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div> -->
       <div class="offcanvas-body p-0 m-0">
-        <div id="sidebar-container-small" class=""></div>
+        <div id="sidebar-container-small"></div>
       </div>
     </div>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="dataprivacymodal"
-      tabindex="-1"
-      aria-labelledby="switchaccountmodal"
-      aria-hidden="true"
-    >
-      <div
-        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-      >
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="switchaccountmodal">
-              Switch Account
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="border rounded p-2">
-              <table class="table table-sm table-hover align-items-center">
-                <thead>
-                  <tr>
-                    <th class="">Profile</th>
-                    <th class="">ID Number</th>
-                    <th class="">Fullname</th>
-                    <th class="">Year and Term</th>
-                    <th class="text-center">Action</th>
-                  </tr>
-                </thead>
-                <tbody class="table-group-divider align-items-center">
-                  <tr>
-                    <td>
-                      <img
-                        class="rounded-circle border p-1"
-                        src="../assets/image.png"
-                        alt="Logo"
-                        style="max-width: 50px"
-                      />
-                    </td>
-                    <td>E-11965-14</td>
-                    <td>Validad, Angelo F.</td>
-                    <td>2024 - 2nd Term</td>
-                    <td class="text-center">
-                      <button class="btn btn-sm secondary-btn rounded-pill">
-                        switch
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        class="rounded-circle border p-1"
-                        src="../assets/image.png"
-                        alt="Logo"
-                        style="max-width: 50px"
-                      />
-                    </td>
-                    <td>E-234544-22</td>
-                    <td>Dela Crux, Juan D.</td>
-                    <td>2023 - 2nd Term</td>
-                    <td class="text-center">
-                      <button class="btn btn-sm secondary-btn rounded-pill">
-                        switch
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-sm primary-btn"
-              data-bs-dismiss="modal"
-            >
-              Cancel
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- bootstrap javascript -->
+    <!-- Bootstrap JS -->
     <script src="../bootstrap/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Jquery -->
+    <!-- jQuery -->
     <script src="../jquery/jquery.js"></script>
+
     <script>
       $(document).ready(function () {
-        console.log("jQuery is working!");
+        console.log("✅ jQuery initialized");
 
-        // Load normal sidebar (desktop, lg+)
-        $("#sidebar-container").load("sidebar.html", function () {
-          console.log("Sidebar loaded successfully for large screens!");
-        });
+        $.get("sidebar.html", function (data) {
+          // Insert sidebar into both containers
+          $("#sidebar-container").html(data);
+          $("#sidebar-container-small").html(data);
 
-        // Load offcanvas sidebar (sm/md)
-        $("#sidebar-container-small").load("sidebar.html", function () {
-          console.log("Sidebar loaded successfully in small screen sizes");
-
-          // Rename all collapses and their triggers to avoid conflicts
+          // Fix duplicate collapse IDs in small sidebar
           $("#sidebar-container-small .collapse").each(function () {
-            let oldId = $(this).attr("id");
-            let newId = oldId + "-sm";
+            const oldId = $(this).attr("id");
+            const newId = oldId + "-sm";
             $(this).attr("id", newId);
-
-            // Update matching trigger buttons (data-target, NOT data-bs-target)
             $('#sidebar-container-small [data-target="#' + oldId + '"]').attr(
               "data-target",
               "#" + newId
             );
           });
+
+          // Highlight menu after sidebar loads
+          highlightActiveMenu();
         });
 
-        $("#maincontent").load("dashboard.html", function () {
-          console.log("dashboard loaded successfully!");
-        });
+        const menuMap = {
+          "#dashboard": "dashboard.html",
+          "#studentclearance": "student_clearance.html",
+          "#onlineadvising": "online_advising.html",
+          "#recorddownpayment": "record_downpayment.html",
+          "#submitadmissionrequirement": "submit_admission_requirement.html",
+          "#subjectenrolled": "subject_enrolled.html",
+          "#enrolledloadschedule": "enrolled_load_schedule.html",
+          "#feespaidduringenrollment": "fees_paid_during_enrollment.html",
+          "#ledger": "ledger.html",
+          "#periodicdues": "periodic_dues.html",
+          "#recordtuitionpayment": "record_tuition_payment.html",
+          "#checklist": "check_list.html",
+          "#classassignment": "class_assignment.html",
+          "#classattendance": "class_attendance.html",
+          "#campusattendance": "campus_attendance.html",
+          "#awardsachievementsacad": "awards_achievements_acad.html",
+          "#filedworkprofileojt": "field_work_profile_ojt.html",
+          "#gradingperexamperiod": "grading_per_exam_period.html",
+          "#membership": "membership.html",
+          "#awardsachievementsnonacad": "awards_achievements_non_acad.html",
+          "#editpersonalinfo": "edit_personal_info.html",
+          "#viewpersonalinfo": "view_personal_info.html",
+          "#printpersonalinfo": "print_personal_info.html",
+          "#changepassword": "change_password.html",
+          "#library": "library.html",
+          "#facultyevaluation": "faculty_evaluation.html",
+        };
 
-        $(document).on("click", "#dashboard", function () {
-          $("#maincontent").load("dashboard.html", function () {
-            console.log("student_clearance loaded successfully!");
-          });
-        });
+        // Validate stored page before loading
+        const allowedPages = Object.values(menuMap);
+        const storedPage = localStorage.getItem("activePage");
+        const lastPage = allowedPages.includes(storedPage)
+          ? storedPage
+          : "dashboard.html";
 
-        $(document).on("click", "#studentclearance", function () {
-          $("#maincontent").load("student_clearance.html", function () {
-            console.log("student_clearance loaded successfully!");
-          });
-        });
+        const pageCache = {};
 
-        $(document).on("click", "#onlineadvising", function () {
-          $("#maincontent").load("online_advising.html", function () {
-            console.log("online_advising loaded successfully!");
-          });
-        });
-        $(document).on("click", "#recorddownpayment", function () {
-          $("#maincontent").load("record_downpayment.html", function () {
-            console.log("record_downpayment loaded successfully!");
-          });
-        });
-        $(document).on("click", "#submitadmissionrequirement", function () {
-          $("#maincontent").load(
-            "submit_admission_requirement.html",
-            function () {
-              console.log("submit_admission_requirement loaded successfully!");
-            }
-          );
-        });
-        $(document).on("click", "#subjectenrolled", function () {
-          $("#maincontent").load("subject_enrolled.html", function () {
-            console.log("subject_enrolled loaded successfully!");
-          });
-        });
-        $(document).on("click", "#enrolledloadschedule", function () {
-          $("#maincontent").load("enrolled_load_schedule.html", function () {
-            console.log("enrolled_load_schedule loaded successfully!");
-          });
-        });
-        $(document).on("click", "#feespaidduringenrollment", function () {
-          $("#maincontent").load(
-            "fees_paid_during_enrollment.html",
-            function () {
-              console.log("fees_paid_during_enrollment loaded successfully!");
-            }
-          );
-        });
-        $(document).on("click", "#ledger", function () {
-          $("#maincontent").load("ledger.html", function () {
-            console.log("ledger loaded successfully!");
-          });
-        });
-        $(document).on("click", "#periodicdues", function () {
-          $("#maincontent").load("periodic_dues.html", function () {
-            console.log("periodic_dues loaded successfully!");
-          });
-        });
-        $(document).on("click", "#recordtuitionpayment", function () {
-          $("#maincontent").load("record_tuition_payment.html", function () {
-            console.log("record_tuition_payment loaded successfully!");
-          });
-        });
+        function loadPage(pageFile, menuId) {
+          if (pageCache[pageFile]) {
+            $("#maincontent").html(pageCache[pageFile]);
+            finalizeLoad(pageFile, menuId);
+          } else {
+            $.get(pageFile, function (data) {
+              pageCache[pageFile] = data;
+              $("#maincontent").html(data);
+              finalizeLoad(pageFile, menuId);
+            });
+          }
+        }
 
-        $(document).on("click", "#checklist", function () {
-          $("#maincontent").load("check_list.html", function () {
-            console.log("check_list loaded successfully!");
-          });
-        });
-        $(document).on("click", "#classassignment", function () {
-          $("#maincontent").load("class_assignment.html", function () {
-            console.log("class_assignment loaded successfully!");
-          });
-        });
-        $(document).on("click", "#classattendance", function () {
-          $("#maincontent").load("class_attendance.html", function () {
-            console.log("class_attendance loaded successfully!");
-          });
-        });
-        $(document).on("click", "#campusattendance", function () {
-          $("#maincontent").load("campus_attendance.html", function () {
-            console.log("campus_attendance loaded successfully!");
-          });
-        });
-        $(document).on("click", "#awardsachievementsacad", function () {
-          $("#maincontent").load("awards_achievements_acad.html", function () {
-            console.log("awards_achievements loaded successfully!");
-          });
-        });
-        $(document).on("click", "#filedworkprofileojt", function () {
-          $("#maincontent").load("field_work_profile_ojt.html", function () {
-            console.log("field_work_profile_ojt loaded successfully!");
-          });
-        });
-        $(document).on("click", "#gradingperexamperiod", function () {
-          $("#maincontent").load("grading_per_exam_period.html", function () {
-            console.log("grading_per_exam_period loaded successfully!");
-          });
-        });
-        $(document).on("click", "#membership", function () {
-          $("#maincontent").load("membership.html", function () {
-            console.log("membership loaded successfully!");
-          });
-        });
-        $(document).on("click", "#awardsachievementsnonacad", function () {
-          $("#maincontent").load(
-            "awards_achievements_non_acad.html",
-            function () {
-              console.log("awards_achievements_non_acad loaded successfully!");
-            }
-          );
-        });
-        $(document).on("click", "#editpersonalinfo", function () {
-          $("#maincontent").load("edit_personal_info.html", function () {
-            console.log("edit_personal_information loaded successfully!");
-          });
-        });
-        $(document).on("click", "#viewpersonalinfo", function () {
-          $("#maincontent").load("view_personal_info.html", function () {
-            console.log("view_personal_info loaded successfully!");
-          });
-        });
-        $(document).on("click", "#printpersonalinfo", function () {
-          $("#maincontent").load("print_personal_info.html", function () {
-            console.log("print_personal_info loaded successfully!");
-          });
-        });
-        $(document).on("click", "#changepassword", function () {
-          $("#maincontent").load("change_password.html", function () {
-            console.log("change_password loaded successfully!");
-          });
-        });
-        $(document).on("click", "#library", function () {
-          $("#maincontent").load("library.html", function () {
-            console.log("library loaded successfully!");
-          });
-        });
-        $(document).on("click", "#facultyevaluation", function () {
-          $("#maincontent").load("faculty_evaluation.html", function () {
-            console.log("faculty_evaluation loaded successfully!");
-          });
+        function finalizeLoad(pageFile, menuId) {
+          localStorage.setItem("activePage", pageFile);
+          localStorage.setItem("activeMenu", menuId);
+          highlightActiveMenu();
+        }
+
+        // Load last page or dashboard
+        loadPage(lastPage, localStorage.getItem("activeMenu"));
+
+        $(document).on("click", Object.keys(menuMap).join(","), function () {
+          const menuId = "#" + this.id;
+          const pageFile = menuMap[menuId];
+          loadPage(pageFile, menuId);
         });
 
         $(document).on("click", "#logout", function () {
+          localStorage.clear();
           window.location.href = "login_page.html";
         });
 
         $(document).on("click", "#switchaccountmodalbtn", function () {
-          var offcanvasEl = document.querySelector("#sidebar"); // change ID to yours
-          var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
-          if (offcanvas) {
-            offcanvas.hide();
-          }
+          const offcanvasEl = document.querySelector("#sidebar");
+          const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+          if (offcanvas) offcanvas.hide();
         });
+
+        function highlightActiveMenu() {
+          const activeMenu = localStorage.getItem("activeMenu");
+          if (!activeMenu) return;
+
+          // Clear previous active states
+          $(
+            "#sidebar-container .active, #sidebar-container-small .active"
+          ).removeClass("active");
+
+          // Apply to main sidebar
+          const $main = $("#sidebar-container " + activeMenu);
+          if ($main.length) {
+            $main.addClass("active");
+            const $collapse = $main.closest(".collapse");
+            if ($collapse.length) {
+              $collapse.addClass("show");
+              $('[data-target="#' + $collapse.attr("id") + '"]').addClass(
+                "active"
+              );
+            }
+          }
+
+          // Apply to small sidebar
+          const $small = $("#sidebar-container-small " + activeMenu);
+          if ($small.length) {
+            $small.addClass("active");
+            const $collapseSm = $small.closest(".collapse");
+            if ($collapseSm.length) {
+              $collapseSm.addClass("show");
+              $('[data-target="#' + $collapseSm.attr("id") + '"]').addClass(
+                "active"
+              );
+            }
+          }
+        }
+
+        // Refresh highlight when offcanvas opens
+        $(document).on("shown.bs.offcanvas", "#sidebar", highlightActiveMenu);
       });
     </script>
   </body>

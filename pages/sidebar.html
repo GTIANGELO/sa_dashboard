@@ -1,34 +1,40 @@
 <link href="../style/sidebar_style.css" rel="stylesheet" />
 
-<div class="sidebar d-flex flex-column p-2 bg-light shadow">
+<div class="sidebar d-flex flex-column p-2 bg-light shadow w-100">
   <!-- Logo -->
-  <div
-    class="mb-3 text-center p-3 d-flex gap-3 justify-content-center align-items-center"
-  >
+  <div class="d-flex align-items-center gap-3 text-center p-2 w-100">
     <img
-      class="rounded-circle border shadow-sm"
+      class="rounded-circle border shadow-sm w-50 w-lg-100 mx-lg-auto"
       src="../assets/image.png"
       alt="Logo"
-      style="max-width: 120px"
+      style="max-width: 300px"
     />
-    <div class="d-grid text-start">
+    <div class="d-grid text-start w-100">
       <span class="fw-bold small">E-11965-14</span>
       <span class="small">Validad, Angelo F.</span>
       <span class="small">FS, 2022-23</span>
       <span class="small">4TH YEAR</span>
       <span class="small">BSIS</span>
+    </div>
+    <div class="d-xl-none text-end">
       <button
-        id="switchaccountmodalbtn"
         type="button"
-        data-bs-toggle="modal"
-        data-bs-target="#dataprivacymodal"
-        class="btn btn-sm primary-btn mt-2"
-      >
-        Switch Account
-      </button>
+        class="btn-close p-2"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
     </div>
   </div>
 
+  <button
+    id="switchaccountmodalbtn"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#dataprivacymodal"
+    class="btn btn-sm primary-btn my-3"
+  >
+    Switch Account
+  </button>
   <!-- Normal Buttons -->
   <button
     class="menu btn custom-btn mb-3 w-100 active d-flex justify-content-start align-items-center gap-2"
@@ -77,7 +83,7 @@
       <a
         type="button"
         id="onlineadvising"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/account.svg"
           alt="enrollment"
@@ -87,7 +93,7 @@
       <a
         type="button"
         id="recorddownpayment"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/privacy.svg"
           alt="enrollment"
@@ -97,7 +103,7 @@
       <a
         type="button"
         id="submitadmissionrequirement"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -107,7 +113,7 @@
       <a
         type="button"
         id="subjectenrolled"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -117,7 +123,7 @@
       <a
         type="button"
         id="enrolledloadschedule"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -127,7 +133,7 @@
       <a
         type="button"
         id="feespaidduringenrollment"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -161,7 +167,7 @@
       <a
         type="button"
         id="ledger"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/account.svg"
           alt="enrollment"
@@ -171,7 +177,7 @@
       <a
         type="button"
         id="periodicdues"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/privacy.svg"
           alt="enrollment"
@@ -181,7 +187,7 @@
       <a
         type="button"
         id="recordtuitionpayment"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -215,7 +221,7 @@
       <a
         type="button"
         id="checklist"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/account.svg"
           alt="enrollment"
@@ -225,7 +231,7 @@
       <a
         type="button"
         id="classassignment"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/privacy.svg"
           alt="enrollment"
@@ -235,7 +241,7 @@
       <a
         type="button"
         id="classattendance"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -245,7 +251,7 @@
       <a
         type="button"
         id="campusattendance"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -255,7 +261,7 @@
       <a
         type="button"
         id="awardsachievementsacad"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -265,7 +271,7 @@
       <a
         type="button"
         id="filedworkprofileojt"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -275,7 +281,7 @@
       <a
         type="button"
         id="gradingperexamperiod"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/security.svg"
           alt="enrollment"
@@ -309,7 +315,7 @@
       <a
         type="button"
         id="membership"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/account.svg"
           alt="enrollment"
@@ -319,7 +325,7 @@
       <a
         type="button"
         id="awardsachievementsnonacad"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/privacy.svg"
           alt="enrollment"
@@ -353,7 +359,7 @@
       <a
         type="button"
         id="editpersonalinfo"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/account.svg"
           alt="enrollment"
@@ -363,7 +369,7 @@
       <a
         type="button"
         id="viewpersonalinfo"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/privacy.svg"
           alt="enrollment"
@@ -373,7 +379,7 @@
       <a
         type="button"
         id="printpersonalinfo"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/privacy.svg"
           alt="enrollment"
@@ -383,7 +389,7 @@
       <a
         type="button"
         id="changepassword"
-        class="collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
+        class="menu collapse-link d-block mb-1 text-dark text-decoration-none d-flex gap-2 justify-content-start align-items-center"
         ><img
           src="../assets/icons/privacy.svg"
           alt="enrollment"
@@ -395,14 +401,14 @@
 
   <button
     id="library"
-    class="btn custom-btn mb-3 w-100 d-flex justify-content-start align-items-center gap-2"
+    class="menu btn custom-btn mb-3 w-100 d-flex justify-content-start align-items-center gap-2"
   >
     <img src="../assets/icons/library.svg" alt="dashboard" class="menu-icon" />
     Library
   </button>
   <button
     id="facultyevaluation"
-    class="btn custom-btn mb-3 w-100 d-flex justify-content-start align-items-center gap-2"
+    class="menu btn custom-btn mb-3 w-100 d-flex justify-content-start align-items-center gap-2"
   >
     <img
       src="../assets/icons/faculty.svg"
@@ -511,7 +517,7 @@
       });
 
     // Submenu links active state + highlight its parent button
-    $(".collapse-link").on("click", function () {
+    $(".menu .collapse-link").on("click", function () {
       $(".collapse-link").removeClass("active");
       $(this).addClass("active");
 

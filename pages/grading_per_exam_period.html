@@ -1,44 +1,149 @@
-<div class="shadow-sm border rounded bg-light my-2">
+<div class="shadow-sm border rounded my-2">
   <div
-    class="d-flex p-2 px-3 justify-content-between align-items-center secondary-text-color fs-5 fw-bold"
+    class="d-flex align-items-center justify-content-between w-100 p-2 px-3 fs-6 fw-bold"
   >
-    <div class="d-flex gap-2">
+    <div class="d-flex align-items-center gap-2">
       <a
-        class="d-block d-lg-none btn btn-sm"
+        class="d-flex gap-2 d-xl-none btn btn-sm"
         data-bs-toggle="offcanvas"
         href="#sidebar"
         role="button"
         aria-controls="sidebar"
-        style="width: 40px; height: 40px"
       >
         <img
           src="../assets/icons/burger_menu.svg"
           alt="menu"
-          style="width: 20px; height: 20px"
+          style="width: 20px"
         />
       </a>
-      Grading Per Exam Period
+      <div class="fs-6 fw-bold secondary-text-color">
+        Grading Per Exam Period
+      </div>
     </div>
-    <div class="text-center p-1 bg-light rounded-circle">
+
+    <div class="text-center p-1 rounded-circle">
       <img src="../assets/sample_logo.png" alt="Logo" style="max-width: 50px" />
     </div>
   </div>
 </div>
 
-<div class="d-grid gap-1 m-4">
-  <div class="row align-items-stretch justify-content-center mb-3">
-    <div class="col-8 d-flex">
-      <div
-        class="d-grid align-items-center gap-2 border shadow-sm rounded p-3 w-100"
-      >
-        <div class="d-flex justify-content-between align-items-start gap-2 p-2">
-          <div class="d-grid gap-0">
-            <h1 class="display-6 fw-bold">Grading Per Exam Period</h1>
-            <div
-              class="fw-bold m-0 d-flex align-items-center gap-2 fs-6 mt-auto"
-            ></div>
-          </div>
+<div class="p-3 border shadow mt-4 rounded">
+  <div class="fs-6 fw-bold text-danger">
+    Please provide grade/term/school year from/to information
+  </div>
+
+  <div class="row mt-4">
+    <!-- First column -->
+    <div class="col-12">
+      <div class="d-grid d-md-flex mb-2 mb-2">
+        <div class="fw-normal" style="width: 180px">Student ID:</div>
+        <div class="fw-bold">E-11965-14</div>
+      </div>
+      <div class="d-grid d-md-flex mb-2 mb-2">
+        <div class="fw-normal" style="width: 180px">Student Name:</div>
+        <div class="fw-bold">Validad, Angelo</div>
+      </div>
+      <div class="d-grid d-md-flex mb-2 mb-2">
+        <div class="fw-normal" style="width: 180px">Course/Major:</div>
+        <div class="fw-bold">
+          Bacheolor of Science in Information Technology
         </div>
+      </div>
+      <div class="d-grid d-md-flex mb-2 mb-2">
+        <div class="fw-normal" style="width: 180px">Year:</div>
+        <div class="fw-bold">4</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-grid d-lg-flex align-items-center gap-3 w-100 mt-4">
+    <div class="d-grid d-lg-flex gap-2 align-items-center w-100">
+      <div class="form-floating w-100">
+        <select name="w-25" id="" class="form-select">
+          <option value="">Prelim</option>
+          <option value="">Midterm</option>
+          <option value="">Final</option>
+        </select>
+        <label for="starting_year" class="">
+          <div class="d-flex align-items-center gap-1">Show:</div></label
+        >
+      </div>
+      <div class="form-floating w-100">
+        <select name="w-25" id="" class="form-select">
+          <option value="">1st Sem</option>
+          <option value="">2nd Sem</option>
+          <option value="">3rd Sem</option>
+          <option value="">Summer</option>
+        </select>
+        <label for="starting_year" class="">
+          <div class="d-flex align-items-center gap-1">Term:</div></label
+        >
+      </div>
+    </div>
+    <div class="d-grid d-lg-flex gap-2 align-items-center w-100">
+      <span class="w-25">SY-Term</span>
+      <div class="form-floating w-100">
+        <input
+          type="text"
+          class="form-control"
+          id="starting_year"
+          placeholder="Starting year"
+        />
+        <label for="starting_year" class="">
+          <div class="d-flex align-items-center gap-1">
+            Starting year
+          </div></label
+        >
+      </div>
+      <span class="d-none d-lg-flex my-auto">-</span>
+
+      <div class="form-floating w-100">
+        <input
+          type="text"
+          class="form-control"
+          id="ending_year"
+          placeholder="Ending year"
+        />
+        <label for="ending_year" class="">
+          <div class="d-flex align-items-center gap-1">Ending year</div></label
+        >
+      </div>
+    </div>
+    <button class="btn btn-sm primary-btn w-25">Proceed</button>
+  </div>
+
+  <div class="fs-6 d-grid d-lg-flex align-items-center gap-2 mt-4">
+    <div class="">Note:</div>
+    <span>Red color indicates grades not verified by registrar</span>
+  </div>
+
+  <div class="rounded h-100 mt-4">
+    <h5 class="text-dark fs-6 my-4 fw-bold text-center">
+      Prelim Grades for 2023-2024
+    </h5>
+    <div style="max-height: 350px; overflow-y: auto">
+      <div class="table-responsive">
+        <table class="table table-sm table-striped table-hover table-fixed">
+          <thead>
+            <tr>
+              <th style="width: 120px">Subject Code</th>
+              <th style="width: 300px">Subject Name</th>
+              <th style="width: 200px">Credit</th>
+              <th style="width: 200px">Instructor</th>
+              <th style="width: 150px">Grade</th>
+              <th style="width: 150px">Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ITCOM 401A</td>
+              <td>IT Software (Capstone) Project 2</td>
+              <td></td>
+              <td>Tisuela, Bethel B.</td>
+              <td colspan="2" class="text-center">Grade not encoded</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

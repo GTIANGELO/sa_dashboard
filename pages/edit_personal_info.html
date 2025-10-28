@@ -1,42 +1,81 @@
-<div class="shadow-sm border rounded bg-light my-2">
+<div class="shadow-sm border rounded my-2">
   <div
-    class="d-flex p-2 px-3 justify-content-between align-items-center secondary-text-color fs-5 fw-bold"
+    class="d-flex align-items-center justify-content-between w-100 p-2 px-3 fs-6 fw-bold"
   >
-    <div class="d-flex gap-2">
+    <div class="d-flex align-items-center gap-2">
       <a
-        class="d-block d-lg-none btn btn-sm"
+        class="d-flex gap-2 d-xl-none btn btn-sm"
         data-bs-toggle="offcanvas"
         href="#sidebar"
         role="button"
         aria-controls="sidebar"
-        style="width: 40px; height: 40px"
       >
         <img
           src="../assets/icons/burger_menu.svg"
           alt="menu"
-          style="width: 20px; height: 20px"
+          style="width: 20px"
         />
       </a>
-      Edit Personal Information
+      <div class="fs-6 fw-bold secondary-text-color">
+        Edit Personal Information
+      </div>
     </div>
-    <div class="text-center p-1 bg-light rounded-circle">
+
+    <div class="text-center p-1 rounded-circle">
       <img src="../assets/sample_logo.png" alt="Logo" style="max-width: 50px" />
     </div>
   </div>
 </div>
 
-<div class="d-grid gap-1 m-4">
-  <div class="row align-items-stretch justify-content-center mb-3">
-    <div class="col-8 d-flex">
-      <div
-        class="d-grid align-items-center gap-2 border shadow-sm rounded p-3 w-100"
-      >
-        <div class="d-flex justify-content-between align-items-start gap-2 p-2">
-          <div class="d-grid gap-0">
-            <h1 class="display-6 fw-bold">Edit Personal Information</h1>
-            <div
-              class="fw-bold m-0 d-flex align-items-center gap-2 fs-6 mt-auto"
-            ></div>
+<div class="p-3 border shadow mt-4 rounded">
+  <div class="p-3 mt-4 rounded">
+    <div class="d-grid gap-3 mx-auto w-100 w-md-75 w-lg-50 my-3 p-2">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-10 col-lg-9 col-xl-8">
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control password-field"
+              id="old_password"
+              placeholder="Old Password"
+            />
+            <label for="old_password" class="my-auto"
+              >Personal Mobile Number:</label
+            >
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control password-field"
+              id="new_password"
+              placeholder="New Password"
+            />
+            <label for="new_password" class="my-auto"
+              >Contact Person/Guardian Name:</label
+            >
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control password-field"
+              id="retype_password"
+              placeholder="Retype Password"
+            />
+            <label for="retype_password" class="my-auto"
+              >Contact Person/Guardian Tel:</label
+            >
+          </div>
+          <div class="text-center">
+            <button class="btn btn-sm primary-btn w-50">
+              Update Contact Information
+            </button>
+          </div>
+          <div class="my-3 small text-muted">
+            Note: Please make sure the contact information shown above is
+            correct. If not, please modify and click on “Update Contact
+            Information”.
           </div>
         </div>
       </div>
