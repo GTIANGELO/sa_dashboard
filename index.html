@@ -6,11 +6,11 @@
     <title>Login Page</title>
     <!-- CSS -->
     <link
-      href="../bootstrap/bootstrap-5.3.7-dist/css/bootstrap.min.css"
+      href="bootstrap/bootstrap-5.3.7-dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="../style/custom_style.css" rel="stylesheet" />
-    <link href="../style/login_style.css" rel="stylesheet" />
+    <link href="style/custom_style.css" rel="stylesheet" />
+    <link href="style/login_style.css" rel="stylesheet" />
     <!-- CSS -->
   </head>
   <body>
@@ -22,7 +22,7 @@
         style="max-width: 550px; width: 100%"
       >
         <img
-          src="../assets/sample_logo.png"
+          src="assets/sample_logo.png"
           width="110"
           class="mx-auto d-block my-4"
           alt="Logo"
@@ -307,11 +307,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../bootstrap/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../bootstrap/bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
 
     <!-- Jquery -->
-    <script src="../jquery/jquery.js"></script>
+    <script src="jquery/jquery.js"></script>
     <script>
       $(document).ready(function () {
         console.log("jQuery is working!");
@@ -344,7 +344,7 @@
                 loadingModal.hide();
                 // redirect to dashboard
                 window.location.href =
-                  "../pages/main_page.html?userType=" + usernameval;
+                  "pages/main_page.html?userType=" + usernameval;
               }, 2000);
             } else {
               appendAlert("Invalid Username or Password!", "warning");
