@@ -212,8 +212,22 @@
             finalizeLoad(pageFile, menuId);
           } else {
             $.get(pageFile, function (data) {
-              pageCache[pageFile] = data;
-              $("#maincontent").html(data);
+              var container = $("<div>").html(data);
+
+              // Extract and remove scripts
+              var scripts = container.find("script");
+              scripts.remove();
+
+              pageCache[pageFile] = container.html();
+              $("#maincontent").html(pageCache[pageFile]);
+
+              // Evaluate scripts
+              scripts.each(function () {
+                $.globalEval(
+                  this.text || this.textContent || this.innerHTML || ""
+                );
+              });
+
               finalizeLoad(pageFile, menuId);
             });
           }

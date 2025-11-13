@@ -137,20 +137,9 @@
 <!-- Jquery -->
 <script src="../jquery/jquery.js"></script>
 <script>
-  $(document).ready(function () {
-    $("#btn_print").on("click", function (e) {
-      e.preventDefault();
-
-      const originalContents = document.body.innerHTML;
-      const printContents = document.getElementById("print_section").innerHTML;
-
-      document.body.innerHTML = printContents;
-
-      window.print();
-
-      document.body.innerHTML = originalContents;
-
-      location.reload();
-    });
+  // jQuery click handler that opens a URL in a new tab
+  $(document).on("click", "#btn_print", function (e) {
+    e.preventDefault();
+    window.open("https://example.com", "_blank", "noopener,noreferrer");
   });
 </script>
