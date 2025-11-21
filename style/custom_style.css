@@ -87,10 +87,10 @@ html {
 .table-fixed th,
 .table-fixed td {
   overflow: hidden;
-  text-overflow: ellipsis; /* optional if you want ... for clipped text */
-  white-space: normal; /* allow wrapping */
-  word-wrap: break-word; /* break long words if needed */
-  word-break: break-word; /* ensures breaking happens */
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 #residency_evaluation td.passing,

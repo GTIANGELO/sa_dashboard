@@ -82,7 +82,13 @@
         >Show Ledger from the first enrolled semester until present</label
       >
     </div>
-    <a href="#!" class="text-primary">View installment Schedule</a>
+    <a
+      type="button"
+      class="text-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+      >View installment Schedule</a
+    >
   </div>
 
   <div class="row my-4">
@@ -168,6 +174,107 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade modal-xl"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">
+          Installment Schedule
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row mt-4">
+          <!-- First column -->
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="d-flex mb-2">
+              <div class="fw-normal" style="width: 120px">Student ID:</div>
+              <div class="fw-bold">E-11965-14</div>
+            </div>
+            <div class="d-flex mb-2">
+              <div class="fw-normal" style="width: 120px">Student Name:</div>
+              <div class="fw-bold">Validad, Angelo</div>
+            </div>
+          </div>
+
+          <!-- Second column -->
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="d-flex mb-2">
+              <div class="fw-normal" style="width: 200px">
+                Last Enrolled SY-Term:
+              </div>
+              <div class="fw-bold">First Term, 2022 - 23</div>
+            </div>
+            <div class="d-flex mb-2">
+              <div class="fw-normal" style="width: 200px">
+                Last Enrolled Course-Yr:
+              </div>
+              <div class="fw-bold">BSIT - 4</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <div style="max-height: 350px; overflow-y: auto">
+            <div class="table-responsive">
+              <table
+                class="table table-striped table-sm table-hover table-fixed"
+              >
+                <thead>
+                  <tr>
+                    <th style="width: 120px">Payment Schedule</th>
+                    <th style="width: 120px" class="text-center">
+                      Required Amount
+                    </th>
+                    <th style="width: 120px" class="text-center">
+                      CUMULATIVE BALANCE
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="text-end">
+                  <tr>
+                    <td class="text-start">Prelim</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-start">Midterm</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-start">Final</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
       </div>
     </div>
   </div>

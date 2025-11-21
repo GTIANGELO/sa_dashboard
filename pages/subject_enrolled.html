@@ -1,5 +1,93 @@
 <link href="../style/custom_style.css" rel="stylesheet" />
 
+<!-- For Printng -->
+<style>
+  @media print {
+    /* Hide everything except the print section */
+    body * {
+      visibility: hidden !important;
+    }
+
+    #print_section,
+    #print_section * {
+      visibility: visible !important;
+    }
+
+    #print_section {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    /* Hide the print button specifically */
+    #btn_print {
+      display: none !important;
+    }
+
+    /* Remove all borders except table borders */
+    #print_section * {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Optional: remove outer borders too */
+    #print_section {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Restore table borders */
+    #print_section table,
+    #print_section th,
+    #print_section td {
+      border: 1px solid #000 !important;
+      border-collapse: collapse !important;
+    }
+
+    /* Remove table scroll area (max-height & overflow) */
+    #print_section div[style*="max-height"] {
+      max-height: none !important;
+      overflow: visible !important;
+    }
+
+    /* Make table full width and shrink columns */
+    #print_section table {
+      width: 100% !important;
+      table-layout: auto !important;
+    }
+
+    /* Smaller padding to reduce table width */
+    #print_section th,
+    #print_section td {
+      padding: 4px 6px !important;
+      white-space: normal !important;
+    }
+
+    /* Remove fixed widths from <th> and <td> */
+    #print_section th[style],
+    #print_section td[style] {
+      width: auto !important;
+    }
+
+    /* Put the two unit labels side-by-side with space-between */
+    #print_section .d-grid.d-md-flex {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+    }
+
+    #print_section .d-grid.d-md-flex span {
+      margin: 0 !important;
+      padding: 0 !important;
+      flex: 1 1 auto !important;
+    }
+  }
+</style>
+
+<!-- For Printng -->
+
 <div class="shadow-sm border rounded my-2">
   <div
     class="d-flex align-items-center justify-content-between w-100 p-2 px-3 fs-6 fw-bold"
@@ -32,7 +120,7 @@
     <div class="col">
       <div class="border shadow-sm p-3 rounded">
         <span class="fw-bold fs-6">ENROLLED LIST FOR 1ST SEM, 2022-2023</span>
-        <div class="d-grid d-lg-flex gap-3 align-items-center mt-4">
+        <div class="d-grid d-lg-flex gap-3 align-items-center mt-2">
           <!-- Left side -->
           <div class="d-flex w-50 mb-2 small">
             <div class="fw-normal" style="width: 200px">
@@ -58,12 +146,10 @@
 
         <div class="mt-4">
           <div
-            class="d-grid d-md-flex align-items-center justify-content-between"
+            class="d-grid gap-2 mb-3 d-md-flex align-items-center justify-content-between"
           >
-            <span class="mb-3 small mb-2"
-              >MAXIMUM UNITS FOR THIS SEMESTER : 21.0</span
-            >
-            <span class="mb-3 small mb-2">TOTAL UNITS LOAD TAKEN : 3.0 </span>
+            <span class="small">MAXIMUM UNITS FOR THIS SEMESTER : 21.0</span>
+            <span class="small">TOTAL UNITS LOAD TAKEN : 3.0 </span>
           </div>
 
           <div class="" style="max-height: 400px; overflow-y: auto">
@@ -137,9 +223,7 @@
 <!-- Jquery -->
 <script src="../jquery/jquery.js"></script>
 <script>
-  // jQuery click handler that opens a URL in a new tab
-  $(document).on("click", "#btn_print", function (e) {
-    e.preventDefault();
-    window.open("https://example.com", "_blank", "noopener,noreferrer");
+  $(document).on("click", "#btn_print", function () {
+    window.print();
   });
 </script>

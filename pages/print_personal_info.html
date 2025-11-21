@@ -1,3 +1,62 @@
+<style>
+  @media print {
+    /* Hide everything */
+    body * {
+      visibility: hidden !important;
+    }
+
+    /* Show only the print section */
+    #print_section,
+    #print_section * {
+      visibility: visible !important;
+    }
+
+    /* Position print section as full page */
+    #print_section {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    /* Hide the print button */
+    #btn_print {
+      display: none !important;
+    }
+
+    /* Remove border + shadow from top header */
+    .shadow-sm.border.rounded.my-2,
+    .shadow-sm.border,
+    .shadow-sm,
+    .border {
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    /* If header text container also has borders/shadows */
+    .d-flex.align-items-center.justify-content-between {
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    /* Remove scrollbar from all table wrappers when printing */
+    div[style*="overflow-y"],
+    .table-responsive {
+      overflow: visible !important;
+      max-height: none !important;
+    }
+
+    /* Also remove scrollbar from any custom scroll containers */
+    * {
+      scrollbar-width: none !important;
+    }
+
+    *::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+</style>
+
 <div class="shadow-sm border rounded my-2">
   <div
     class="d-flex align-items-center justify-content-between w-100 p-2 px-3 fs-6 fw-bold"
@@ -31,512 +90,503 @@
     <img src="../assets/icons/print.svg" alt="enrollment" class="menu-icon" />
     Print
   </a>
-  <div class="fw-bold mb-4 text-center">
-    GENERAL STUDENT PERSONAL INFORMATION SHEET (GSPIS)
-  </div>
-
-  <div class="row small">
-    <!-- First column -->
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-6">
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">COURSE:</div>
-        <div class="fw-bold">Bachelor of Science in Information Technology</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">MAJOR:</div>
-        <div class="fw-bold"></div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">CURRICULUM YEAR:</div>
-        <div class="fw-bold">2023 to 2024</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">YEAR LEVEL/TERM:</div>
-        <div class="fw-bold">1st/ 1st Semester</div>
-      </div>
+  <div id="print_section">
+    <div class="fw-bold mb-4 text-center">
+      GENERAL STUDENT PERSONAL INFORMATION SHEET (GSPIS)
     </div>
 
-    <!-- Second column -->
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-6">
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">SCHOOL YEAR:</div>
-        <div class="fw-bold">2025 to 2026</div>
-      </div>
-    </div>
-  </div>
-  <hr />
-
-  <div class="row small">
-    <div class="fw-bold mb-3">I A - Personal Data</div>
-    <!-- First column -->
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Last Name:</div>
-        <div class="fw-bold">ABANILLA</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">
-          Name in Native Language Character:
-        </div>
-        <div class="fw-bold"></div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Gender:</div>
-        <div class="fw-bold">Female</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Date of Birth(mm/dd/yyyy):</div>
-        <div class="fw-bold">02/25/2001</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Civil Status :</div>
-        <div class="fw-bold">Single</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">No. of children:</div>
-        <div class="fw-bold"></div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Birth Order:</div>
-        <div class="fw-bold">1</div>
-      </div>
-    </div>
-
-    <!-- Second column -->
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">First Name:</div>
-        <div class="fw-bold">MARAIAH JOY</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Religion:</div>
-        <div class="fw-bold">ROMAN CATHOLIC</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Place of Birth:</div>
-        <div class="fw-bold">KABABANKALAN CITY</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Woman:</div>
-        <div class="fw-bold">State Maiden's Name</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Email Address:</div>
-        <div class="fw-bold">maraiahjoy.abanilla@lccbonline.edu.ph</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Mobile Number:</div>
-        <div class="fw-bold">09474621144</div>
-      </div>
-    </div>
-
-    <!-- Third column -->
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Middle Name:</div>
-        <div class="fw-bold">DEGILLO</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Nationality:</div>
-        <div class="fw-bold">Filipino</div>
-      </div>
-      <div class="d-grid d-md-flex mb-2">
-        <div class="" style="width: 45%">Man:</div>
-        <div class="fw-bold">Name of Spouse</div>
-      </div>
-    </div>
-  </div>
-  <hr />
-  <div class="row small">
-    <div class="fw-bold">
-      I B - ALIEN STATUS DATA (for alien/foreigner student only)
-    </div>
-    <div class="mt-3">Not Applicable</div>
-  </div>
-  <hr />
-  <div class="row small">
-    <div class="fw-bold mb-3">II – RESIDENCE DATA</div>
     <div class="row small">
-      <div class="fs-6 fw-bold mb-2 mt-3">Home Address</div>
+      <!-- First column -->
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-6">
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">COURSE:</div>
+          <div class="fw-bold">
+            Bachelor of Science in Information Technology
+          </div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">MAJOR:</div>
+          <div class="fw-bold"></div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">CURRICULUM YEAR:</div>
+          <div class="fw-bold">2023 to 2024</div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">YEAR LEVEL/TERM:</div>
+          <div class="fw-bold">1st/ 1st Semester</div>
+        </div>
+      </div>
 
+      <!-- Second column -->
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-6">
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">SCHOOL YEAR:</div>
+          <div class="fw-bold">2025 to 2026</div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="row small">
+      <div class="fw-bold mb-3">I A - Personal Data</div>
       <!-- First column -->
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
         <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">
-            Apartment Name/House No./Street/Barangay:
+          <div class="" style="width: 45%">Last Name:</div>
+          <div class="fw-bold">ABANILLA</div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">
+            Name in Native Language Character:
           </div>
-          <div class="fw-bold">PRK 6 SITIO LUYANG</div>
+          <div class="fw-bold"></div>
         </div>
         <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Province/State:</div>
-          <div class="fw-bold">NEGROS OCCIDENTAL</div>
+          <div class="" style="width: 45%">Gender:</div>
+          <div class="fw-bold">Female</div>
         </div>
         <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Zipcode:</div>
-          <div class="fw-bold">6112</div>
+          <div class="" style="width: 45%">Date of Birth(mm/dd/yyyy):</div>
+          <div class="fw-bold">02/25/2001</div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">Civil Status :</div>
+          <div class="fw-bold">Single</div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">No. of children:</div>
+          <div class="fw-bold"></div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">Birth Order:</div>
+          <div class="fw-bold">1</div>
         </div>
       </div>
 
       <!-- Second column -->
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
         <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">City/Municipality:</div>
-          <div class="fw-bold">CAUAYAN</div>
+          <div class="" style="width: 45%">First Name:</div>
+          <div class="fw-bold">MARAIAH JOY</div>
         </div>
         <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Country:</div>
-          <div class="fw-bold">Philippines</div>
+          <div class="" style="width: 45%">Religion:</div>
+          <div class="fw-bold">ROMAN CATHOLIC</div>
         </div>
         <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Telephone Nos:</div>
+          <div class="" style="width: 45%">Place of Birth:</div>
+          <div class="fw-bold">KABABANKALAN CITY</div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">Woman:</div>
+          <div class="fw-bold">State Maiden's Name</div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">Email Address:</div>
+          <div class="fw-bold">maraiahjoy.abanilla@lccbonline.edu.ph</div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">Mobile Number:</div>
           <div class="fw-bold">09474621144</div>
         </div>
       </div>
 
-      <div class="fs-6 fw-bold mb-2 mt-3">Current Contact Address</div>
-
-      <!-- First column -->
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+      <!-- Third column -->
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
         <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Contact Person/Guardian Name:</div>
-          <div class="fw-bold">Richard Abanilla</div>
+          <div class="" style="width: 45%">Middle Name:</div>
+          <div class="fw-bold">DEGILLO</div>
         </div>
         <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">
-            Apartment Name/House No./Street/Barangay:
+          <div class="" style="width: 45%">Nationality:</div>
+          <div class="fw-bold">Filipino</div>
+        </div>
+        <div class="d-grid d-md-flex mb-2">
+          <div class="" style="width: 45%">Man:</div>
+          <div class="fw-bold">Name of Spouse</div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row small">
+      <div class="fw-bold">
+        I B - ALIEN STATUS DATA (for alien/foreigner student only)
+      </div>
+      <div class="mt-3">Not Applicable</div>
+    </div>
+    <hr />
+    <div class="row small">
+      <div class="fw-bold mb-3">II – RESIDENCE DATA</div>
+      <div class="row small">
+        <div class="fs-6 fw-bold mb-2 mt-3">Home Address</div>
+
+        <!-- First column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">
+              Apartment Name/House No./Street/Barangay:
+            </div>
+            <div class="fw-bold">PRK 6 SITIO LUYANG</div>
           </div>
-          <div class="fw-bold">PRK 6 SITIO LUYANG</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">City/Municipality:</div>
-          <div class="fw-bold">CAUAYAN</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Country:</div>
-          <div class="fw-bold">Philippines</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Telephone Nos.:</div>
-          <div class="fw-bold">09213491095</div>
-        </div>
-      </div>
-
-      <!-- Second column -->
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Relation:</div>
-          <div class="fw-bold">Father</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Province/State:</div>
-          <div class="fw-bold">NEGROS OCCIDENTAL</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Zipcode:</div>
-          <div class="fw-bold">6112</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Email Address:</div>
-          <div class="fw-bold"></div>
-        </div>
-      </div>
-
-      <div class="fs-6 fw-bold mb-2 mt-3">
-        Emergency Contact Address: (if not same as above)
-      </div>
-
-      <!-- First column -->
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Contact Person/Guardian Name:</div>
-          <div class="fw-bold">Richard Abanilla</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">
-            Apartment Name/House No./Street/Barangay:
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Province/State:</div>
+            <div class="fw-bold">NEGROS OCCIDENTAL</div>
           </div>
-          <div class="fw-bold">PRK 6 SITIO LUYANG</div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Zipcode:</div>
+            <div class="fw-bold">6112</div>
+          </div>
         </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">City/Municipality:</div>
-          <div class="fw-bold">CAUAYAN</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Country:</div>
-          <div class="fw-bold">Philippines</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Telephone Nos.:</div>
-          <div class="fw-bold">09213491095</div>
-        </div>
-      </div>
 
-      <!-- Second column -->
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Relation:</div>
-          <div class="fw-bold">Father</div>
+        <!-- Second column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">City/Municipality:</div>
+            <div class="fw-bold">CAUAYAN</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Country:</div>
+            <div class="fw-bold">Philippines</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Telephone Nos:</div>
+            <div class="fw-bold">09474621144</div>
+          </div>
         </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Province/State:</div>
-          <div class="fw-bold">NEGROS OCCIDENTAL</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Zipcode:</div>
-          <div class="fw-bold">6112</div>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <div class="small">
-      <div class="fw-bold mb-3">III – PHYSICAL DESCRIPTION</div>
-      <div class="d-flex justify-content-between">
-        <div class="d-grid d-md-flex mb-2 gap-2">
-          <div class="">Height(cms):</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2 gap-2">
-          <div class="">Weight(lbs):</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2 gap-2">
-          <div class="">Built:</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2 gap-2">
-          <div class="">Eye color:</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2 gap-2">
-          <div class="">Hair color:</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2 gap-2">
-          <div class="">Complexion:</div>
-          <div class="fw-bold"></div>
-        </div>
-      </div>
-      <div class="d-grid gap-1 mt-1">
-        <div class="d-grid d-md-flex mb-2 gap-2">
-          <div class="">Other Distinguishing Features:</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2 gap-2">
-          <div class="">Physical Handicap or Disability (if any):</div>
-          <div class="fw-bold"></div>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <div class="row small">
-      <div class="fw-bold mb-3">IV– FAMILY DATA</div>
-      <div class="fs-6 fw-bold mb-2 mt-1">Parents</div>
 
-      <!-- First column -->
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Father’s Name:</div>
-          <div class="fw-bold">ABANILLA, RICHARD ABANILLA G.</div>
+        <div class="fs-6 fw-bold mb-2 mt-3">Current Contact Address</div>
+
+        <!-- First column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Contact Person/Guardian Name:</div>
+            <div class="fw-bold">Richard Abanilla</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">
+              Apartment Name/House No./Street/Barangay:
+            </div>
+            <div class="fw-bold">PRK 6 SITIO LUYANG</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">City/Municipality:</div>
+            <div class="fw-bold">CAUAYAN</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Country:</div>
+            <div class="fw-bold">Philippines</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Telephone Nos.:</div>
+            <div class="fw-bold">09213491095</div>
+          </div>
         </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Company Name:</div>
-          <div class="fw-bold">N/A</div>
+
+        <!-- Second column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Relation:</div>
+            <div class="fw-bold">Father</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Province/State:</div>
+            <div class="fw-bold">NEGROS OCCIDENTAL</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Zipcode:</div>
+            <div class="fw-bold">6112</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Email Address:</div>
+            <div class="fw-bold"></div>
+          </div>
         </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Company Address:</div>
-          <div class="fw-bold">N/A</div>
+
+        <div class="fs-6 fw-bold mb-2 mt-3">
+          Emergency Contact Address: (if not same as above)
         </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Mother’s Name:</div>
-          <div class="fw-bold">ABANILLA, BABY JOY ABANILLA C.</div>
+
+        <!-- First column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Contact Person/Guardian Name:</div>
+            <div class="fw-bold">Richard Abanilla</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">
+              Apartment Name/House No./Street/Barangay:
+            </div>
+            <div class="fw-bold">PRK 6 SITIO LUYANG</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">City/Municipality:</div>
+            <div class="fw-bold">CAUAYAN</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Country:</div>
+            <div class="fw-bold">Philippines</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Telephone Nos.:</div>
+            <div class="fw-bold">09213491095</div>
+          </div>
         </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Company Address:</div>
-          <div class="fw-bold">N/A</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Zipcode:</div>
-          <div class="fw-bold">N/A</div>
+
+        <!-- Second column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Relation:</div>
+            <div class="fw-bold">Father</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Province/State:</div>
+            <div class="fw-bold">NEGROS OCCIDENTAL</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Zipcode:</div>
+            <div class="fw-bold">6112</div>
+          </div>
         </div>
       </div>
-
-      <!-- Second column -->
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Occupation:</div>
-          <div class="fw-bold">SELF-EMPLOYED</div>
+      <hr />
+      <div class="small">
+        <div class="fw-bold mb-3">III – PHYSICAL DESCRIPTION</div>
+        <div class="d-flex justify-content-between">
+          <div class="d-grid d-md-flex mb-2 gap-2">
+            <div class="">Height(cms):</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2 gap-2">
+            <div class="">Weight(lbs):</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2 gap-2">
+            <div class="">Built:</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2 gap-2">
+            <div class="">Eye color:</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2 gap-2">
+            <div class="">Hair color:</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2 gap-2">
+            <div class="">Complexion:</div>
+            <div class="fw-bold"></div>
+          </div>
         </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Telephone Nos.:</div>
-          <div class="fw-bold">N/A</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Father’s Email Address:</div>
-          <div class="fw-bold">N/A</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Occupation:</div>
-          <div class="fw-bold">BUSINESS WOMAN</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Telephone Nos.:</div>
-          <div class="fw-bold">N/A</div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Mother’s Email Address:</div>
-          <div class="fw-bold">N/A</div>
-        </div>
-      </div>
-
-      <div class="fs-6 fw-bold mb-2 mt-1">Brother(s)/Sister(s):</div>
-      <div style="max-height: 350px; overflow-y: auto">
-        <div class="table-responsive">
-          <table class="table table-sm table-striped table-hover table-fixed">
-            <thead>
-              <tr>
-                <th style="width: 120px">NAME</th>
-                <th style="width: 300px">DATE OF BIRTH</th>
-                <th style="width: 200px">COURSE/OCCUPATION</th>
-                <th style="width: 200px">SCHOOL/COMPANY</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="4">No Data</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="d-grid gap-1 mt-1">
+          <div class="d-grid d-md-flex mb-2 gap-2">
+            <div class="">Other Distinguishing Features:</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2 gap-2">
+            <div class="">Physical Handicap or Disability (if any):</div>
+            <div class="fw-bold"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <hr />
-    <div class="row small">
-      <div class="fw-bold mb-3">V – EDUCATIONAL BACKGROUND</div>
+      <hr />
+      <div class="row small">
+        <div class="fw-bold mb-3">IV– FAMILY DATA</div>
+        <div class="fs-6 fw-bold mb-2 mt-1">Parents</div>
 
-      <div style="max-height: 350px; overflow-y: auto">
-        <div class="table-responsive">
-          <table class="table table-sm table-hover table-fixed">
-            <thead>
-              <tr>
-                <th style="width: 120px"></th>
-                <th style="width: 300px">NAME</th>
-                <th style="width: 200px">COURSE/YEAR GRADUATED</th>
-                <th style="width: 200px">HONORS/AWARDS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Elementary</td>
-                <td>St. Columban's Academy</td>
-                <td>2007 2012</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>High School</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>College</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Post Graduate</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Vocational</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- First column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Father’s Name:</div>
+            <div class="fw-bold">ABANILLA, RICHARD ABANILLA G.</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Company Name:</div>
+            <div class="fw-bold">N/A</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Company Address:</div>
+            <div class="fw-bold">N/A</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Mother’s Name:</div>
+            <div class="fw-bold">ABANILLA, BABY JOY ABANILLA C.</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Company Address:</div>
+            <div class="fw-bold">N/A</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Zipcode:</div>
+            <div class="fw-bold">N/A</div>
+          </div>
+        </div>
+
+        <!-- Second column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Occupation:</div>
+            <div class="fw-bold">SELF-EMPLOYED</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Telephone Nos.:</div>
+            <div class="fw-bold">N/A</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Father’s Email Address:</div>
+            <div class="fw-bold">N/A</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Occupation:</div>
+            <div class="fw-bold">BUSINESS WOMAN</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Telephone Nos.:</div>
+            <div class="fw-bold">N/A</div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Mother’s Email Address:</div>
+            <div class="fw-bold">N/A</div>
+          </div>
+        </div>
+
+        <div class="fs-6 fw-bold mb-2 mt-1">Brother(s)/Sister(s):</div>
+        <div style="max-height: 350px; overflow-y: auto">
+          <div class="table-responsive">
+            <table class="table table-sm table-striped table-hover table-fixed">
+              <thead>
+                <tr>
+                  <th style="width: 120px">NAME</th>
+                  <th style="width: 300px">DATE OF BIRTH</th>
+                  <th style="width: 200px">COURSE/OCCUPATION</th>
+                  <th style="width: 200px">SCHOOL/COMPANY</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4">No Data</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
-    <hr />
+      <hr />
+      <div class="row small">
+        <div class="fw-bold mb-3">V – EDUCATIONAL BACKGROUND</div>
 
-    <div class="row small">
-      <div class="fw-bold mb-3">VI– GENERAL QUALIFICATION</div>
-
-      <!-- First column -->
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Languages:</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Hobbies:</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Skills:</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Talents:</div>
-          <div class="fw-bold"></div>
-        </div>
-        <div class="d-grid d-md-flex mb-2">
-          <div class="" style="width: 50%">Sports:</div>
-          <div class="fw-bold"></div>
+        <div style="max-height: 350px; overflow-y: auto">
+          <div class="table-responsive">
+            <table class="table table-sm table-hover table-fixed">
+              <thead>
+                <tr>
+                  <th style="width: 120px"></th>
+                  <th style="width: 300px">NAME</th>
+                  <th style="width: 200px">COURSE/YEAR GRADUATED</th>
+                  <th style="width: 200px">HONORS/AWARDS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Elementary</td>
+                  <td>St. Columban's Academy</td>
+                  <td>2007 2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>High School</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>College</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Post Graduate</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Vocational</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
-    <hr />
-    <hr />
+      <hr />
 
-    <div class="row small">
-      <div class="fw-bold mb-3">VII– REFERENCES</div>
-      <div class="my-1">
-        Write two or three references who can vouch or guarantee for your total
-        behavior.
+      <div class="row small">
+        <div class="fw-bold mb-3">VI– GENERAL QUALIFICATION</div>
+
+        <!-- First column -->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Languages:</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Hobbies:</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Skills:</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Talents:</div>
+            <div class="fw-bold"></div>
+          </div>
+          <div class="d-grid d-md-flex mb-2">
+            <div class="" style="width: 50%">Sports:</div>
+            <div class="fw-bold"></div>
+          </div>
+        </div>
       </div>
+      <hr />
+      <hr />
 
-      <div style="max-height: 350px; overflow-y: auto">
-        <div class="table-responsive">
-          <table class="table table-sm table-striped table-hover table-fixed">
-            <thead>
-              <tr>
-                <th style="width: 300px">NAME</th>
-                <th style="width: 200px">ADDRESS/TEL. NOS.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="row small">
+        <div class="fw-bold mb-3">VII– REFERENCES</div>
+        <div class="my-1">
+          Write two or three references who can vouch or guarantee for your
+          total behavior.
+        </div>
+
+        <div style="max-height: 350px; overflow-y: auto">
+          <div class="table-responsive">
+            <table class="table table-sm table-striped table-hover table-fixed">
+              <thead>
+                <tr>
+                  <th style="width: 300px">NAME</th>
+                  <th style="width: 200px">ADDRESS/TEL. NOS.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
     <!-- Jquery -->
     <script src="../jquery/jquery.js"></script>
     <script>
-      $(document).ready(function () {
-        $("#btn_print").on("click", function (e) {
-          e.preventDefault();
-
-          const originalContents = document.body.innerHTML;
-          const printContents =
-            document.getElementById("print_section").innerHTML;
-
-          document.body.innerHTML = printContents;
-
-          window.print();
-
-          document.body.innerHTML = originalContents;
-
-          location.reload();
-        });
+      $(document).on("click", "#btn_print", function (e) {
+        e.preventDefault();
+        window.print();
       });
     </script>
   </div>
